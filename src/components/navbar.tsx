@@ -335,7 +335,7 @@ export default function Navbar() {
                           </Link>
 
                           <Link
-                            to="/graphic-design-portfolio"
+                            to="/graphic-design-&-branding"
                             className="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-md"
                           >
                             <Palette className="w-4 h-4 text-red-500" />
@@ -345,7 +345,7 @@ export default function Navbar() {
                           </Link>
 
                           <Link
-                            to="/building-construction-portfolio"
+                            to="/construction-&-civil-engineering"
                             className="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-md"
                           >
                             <Building2 className="w-4 h-4 text-red-500" />
@@ -462,6 +462,8 @@ export default function Navbar() {
                   </Link>
                 </motion.div>
 
+                
+
                 {/* ================= SERVICES ================= */}
                 <motion.div
                   initial={{ x: 40, opacity: 0 }}
@@ -566,6 +568,35 @@ export default function Navbar() {
                           <Briefcase className="w-4 h-4 text-red-500" />
                           Portfolio
                         </Link>
+                        
+                      </motion.div>
+                      <motion.div
+                        initial={{ x: 30, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                      >
+                        <Link
+                          to="/graphic-design-&-branding"
+                          onClick={() => setIsOpen(false)}
+                          className="flex items-center gap-3 py-2 px-2 rounded-md hover:bg-gray-100 text-sm"
+                        >
+                          <Palette className="w-4 h-4 text-red-500" />
+                          Graphic Design Portfolio
+                        </Link>
+                        
+                      </motion.div>
+                      <motion.div
+                        initial={{ x: 30, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                      >
+                        <Link
+                          to="/construction-&-civil-engineering"
+                          onClick={() => setIsOpen(false)}
+                          className="flex items-center gap-3 py-2 px-2 rounded-md hover:bg-gray-100 text-sm"
+                        >
+                          <Building2 className="w-4 h-4 text-red-500" />
+                          Building & Construction Portfolio
+                        </Link>
+                        
                       </motion.div>
                     </motion.div>
                   )}

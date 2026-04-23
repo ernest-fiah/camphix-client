@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { ArrowRight, ChevronRight, ChevronLeft } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -8,61 +8,61 @@ export default function RealEstateDevelopment() {
   =========================== */
   const categories = ["Real Estate Development"];
 
-const galleryItems = [
-  {
-    title: "Real Estate Development",
-    image: "/assets/real-estate-development/1.webp",
-    bg: "bg-[#2a2540]",
-  },
-  {
-    title: "Real Estate Development",
-    image: "/assets/real-estate-development/2.webp",
-    bg: "bg-[#00323f]",
-  },
-  {
-    title: "Real Estate Development",
-    image: "/assets/real-estate-development/3.webp",
-    bg: "bg-[#00365c]",
-  },
-  {
-    title: "Real Estate Development",
-    image: "/assets/real-estate-development/4.webp",
-    bg: "bg-[#374151]",
-  },
-  {
-    title: "Real Estate Development",
-    image: "/assets/real-estate-development/5.webp",
-    bg: "bg-[#5b4636]",
-  },
-  {
-    title: "Real Estate Development",
-    image: "/assets/real-estate-development/6.webp",
-    bg: "bg-[#2a2540]",
-  },
-  {
-    title: "Real Estate Development",
-    image: "/assets/real-estate-development/7.webp",
-    bg: "bg-[#00323f]",
-  },
-  {
-    title: "Real Estate Development",
-    image: "/assets/real-estate-development/8.webp",
-    bg: "bg-[#00365c]",
-  },
-  {
-    title: "Real Estate Development",
-    image: "/assets/real-estate-development/9.webp",
-    bg: "bg-[#374151]",
-  },
-  {
-    title: "Real Estate Development",
-    image: "/assets/real-estate-development/1.webp",
-    bg: "bg-[#5b4636]",
-  },
-];
+  const galleryItems = [
+    {
+      title: "Real Estate Development",
+      image: "/assets/real-estate-development/1.webp",
+      bg: "bg-[#2a2540]",
+    },
+    {
+      title: "Real Estate Development",
+      image: "/assets/real-estate-development/2.webp",
+      bg: "bg-[#00323f]",
+    },
+    {
+      title: "Real Estate Development",
+      image: "/assets/real-estate-development/3.webp",
+      bg: "bg-[#00365c]",
+    },
+    {
+      title: "Real Estate Development",
+      image: "/assets/real-estate-development/4.webp",
+      bg: "bg-[#374151]",
+    },
+    {
+      title: "Real Estate Development",
+      image: "/assets/real-estate-development/5.webp",
+      bg: "bg-[#5b4636]",
+    },
+    {
+      title: "Real Estate Development",
+      image: "/assets/real-estate-development/6.webp",
+      bg: "bg-[#2a2540]",
+    },
+    {
+      title: "Real Estate Development",
+      image: "/assets/real-estate-development/7.webp",
+      bg: "bg-[#00323f]",
+    },
+    {
+      title: "Real Estate Development",
+      image: "/assets/real-estate-development/8.webp",
+      bg: "bg-[#00365c]",
+    },
+    {
+      title: "Real Estate Development",
+      image: "/assets/real-estate-development/9.webp",
+      bg: "bg-[#374151]",
+    },
+    {
+      title: "Real Estate Development",
+      image: "/assets/real-estate-development/1.webp",
+      bg: "bg-[#5b4636]",
+    },
+  ];
 
   const [activeCategory, setActiveCategory] = useState(
-    "Real Estate Development"
+    "Real Estate Development",
   );
   const [current, setCurrent] = useState(0);
 
@@ -79,9 +79,7 @@ const galleryItems = [
   };
 
   const prevSlide = () => {
-    setCurrent((prev) =>
-      prev === 0 ? galleryItems.length - 1 : prev - 1
-    );
+    setCurrent((prev) => (prev === 0 ? galleryItems.length - 1 : prev - 1));
   };
 
   const visibleCards = [
@@ -106,7 +104,6 @@ const galleryItems = [
         className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 py-12 sm:py-16 md:py-20 lg:py-24"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14 lg:gap-16 items-center">
-
           {/* LEFT CONTENT */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -147,14 +144,31 @@ const galleryItems = [
             </p>
 
             {/* BUTTON */}
-            <div className="mt-7 sm:mt-10">
-              <a
-                href="/contact"
-                className="w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-sm sm:text-base px-6 sm:px-10 py-4 rounded-full transition duration-300"
+            <div className="mt-8">
+              <motion.a
+                href="tel:+233541728294"
+                initial={{ opacity: 0, y: 25, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                whileHover={{
+                  scale: 1.05,
+                  y: -3,
+                  boxShadow: "0px 18px 35px rgba(0,0,0,0.18)",
+                }}
+                whileTap={{ scale: 0.96 }}
+                className="group relative w-full sm:w-auto inline-flex justify-center items-center gap-3 px-6 sm:px-10 py-4 rounded-full bg-yellow-400 text-black font-semibold overflow-hidden transition"
               >
-                BOOK A CONSULTATION
-                <ArrowRight className="w-5 h-5 shrink-0" />
-              </a>
+                {/* Shine Effect */}
+                <span className="absolute inset-0 bg-white/30 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 skew-x-12"></span>
+
+                {/* Pulse Ring */}
+                <span className="absolute inset-0 rounded-full border border-yellow-300 animate-ping opacity-20"></span>
+
+                <span className="relative z-10">BOOK A CALL</span>
+
+                <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </motion.a>
             </div>
           </motion.div>
 
@@ -209,7 +223,6 @@ const galleryItems = [
         transition={{ duration: 0.7 }}
         className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 pb-14 sm:pb-20 md:pb-24 lg:pb-28"
       >
-
         {/* TITLE */}
         <div className="text-center">
           <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
@@ -226,7 +239,6 @@ const galleryItems = [
 
         {/* CARDS */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7 md:gap-10 mt-12 sm:mt-16 md:mt-20">
-
           {/* CARD 1 */}
           <motion.div
             initial={{ opacity: 0, y: 35 }}
@@ -301,7 +313,6 @@ const galleryItems = [
               </p>
             </div>
           </motion.div>
-
         </div>
 
         {/* GALLERY SECTION */}
@@ -312,7 +323,6 @@ const galleryItems = [
           transition={{ duration: 0.7 }}
           className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 pb-20"
         >
-
           {/* TITLE */}
           <div className="text-center mb-10">
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight mt-10">
@@ -341,7 +351,6 @@ const galleryItems = [
 
           {/* SLIDER */}
           <div className="relative">
-
             {/* CARDS */}
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
               {visibleCards.map((item, index) => (
@@ -395,10 +404,8 @@ const galleryItems = [
                 />
               ))}
             </div>
-
           </div>
         </motion.div>
-
       </motion.div>
     </section>
   );

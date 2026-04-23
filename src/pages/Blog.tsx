@@ -10,42 +10,42 @@ export default function BlogPage() {
     {
       title: "Modern Construction Techniques for 2026",
       category: "Construction",
-      img: "public/assets/construction/9.jpg",
+      img: "/assets/construction/9.webp",
       excerpt:
         "Exploring new building methods, materials, and precision engineering techniques shaping modern infrastructure.",
     },
     {
       title: "Engineering Urban Growth in Africa",
       category: "Engineering",
-      img: "public/assets/construction/10.jpg",
+      img: "/assets/construction/10.webp",
       excerpt:
         "How engineering principles are reshaping cities with smarter planning and execution systems.",
     },
     {
       title: "Design Thinking in Real Estate Development",
       category: "Construction",
-      img: "public/assets/construction/11.jpg",
+      img: "/assets/construction/11.webp",
       excerpt:
         "The impact of structured design thinking on property value and long-term development success.",
     },
     {
       title: "Visual Branding for Construction Firms",
       category: "Design",
-      img: "public/assets/camphix-flyers/1.jpg",
+      img: "/assets/camphix-flyers/1.webp",
       excerpt:
         "Why strong visual identity matters in modern construction and engineering businesses.",
     },
     {
       title: "Flyer Design That Converts Clients",
       category: "Design",
-      img: "public/assets/camphix-flyers/2.jpg",
+      img: "/assets/camphix-flyers/2.webp",
       excerpt:
         "Simple principles behind high-performing marketing flyers and promotional designs.",
     },
     {
       title: "Digital Marketing for Engineering Companies",
       category: "Engineering",
-      img: "public/assets/camphix-flyers/3.jpg",
+      img: "/assets/camphix-flyers/3.webp",
       excerpt:
         "How engineering firms can leverage digital presence to attract high-value clients.",
     },

@@ -129,17 +129,17 @@ export default function MobileNavbar() {
     {
       title: "Portfolio",
       icon: Briefcase,
-      href: "/strategic-consultancy",
+      href: "/portfolio",
     },
     {
       title: "Graphic Design Portfolio",
       icon: Palette,
-      href: "/strategic-consultancy",
+      href: "/graphic-design-&-branding",
     },
     {
       title: "Building & Construction Portfolio",
       icon: Building2,
-      href: "/strategic-consultancy",
+      href: "/construction-&-civil-engineering",
     },
   ];
 

@@ -58,7 +58,7 @@ export default function AboutOwner() {
           className="text-center"
         >
           <img
-            src="public/assets/owner.jpg"
+            src="/assets/owner.webp"
             alt="Founder"
             className="w-full max-w-md mx-auto shadow-md"
           />

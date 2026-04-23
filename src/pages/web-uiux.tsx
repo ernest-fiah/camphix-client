@@ -15,57 +15,57 @@ export default function WebsiteUIUXDesign() {
   ];
 
   const galleryItems = [
-    {
-      title: "Website & UI/UX Design",
-      image: "public/assets/uiuxdesign/1.jpg",
-      bg: "bg-[#2a2540]",
-    },
-    {
-      title: "Website & UI/UX Design",
-      image: "public/assets/uiuxdesign/2.jpg",
-      bg: "bg-[#00323f]",
-    },
-    {
-      title: "Website & UI/UX Design",
-      image: "public/assets/uiuxdesign/3.jpg",
-      bg: "bg-[#00365c]",
-    },
-    {
-      title: "Website & UI/UX Design",
-      image: "public/assets/uiuxdesign/4.jpg",
-      bg: "bg-[#374151]",
-    },
-    {
-      title: "Website & UI/UX Design",
-      image: "public/assets/uiuxdesign/5.jpg",
-      bg: "bg-[#5b4636]",
-    },
-    {
-      title: "Website & UI/UX Design",
-      image: "public/assets/uiuxdesign/6.jpg",
-      bg: "bg-[#2a2540]",
-    },
-    {
-      title: "Website & UI/UX Design",
-      image: "public/assets/uiuxdesign/7.jpg",
-      bg: "bg-[#00323f]",
-    },
-    {
-      title: "Website & UI/UX Design",
-      image: "public/assets/uiuxdesign/8.jpg",
-      bg: "bg-[#00365c]",
-    },
-    {
-      title: "Website & UI/UX Design",
-      image: "public/assets/uiuxdesign/9.jpg",
-      bg: "bg-[#374151]",
-    },
-    {
-      title: "Website & UI/UX Design",
-      image: "public/assets/uiuxdesign/10.jpg",
-      bg: "bg-[#5b4636]",
-    },
-  ];
+  {
+    title: "Website & UI/UX Design",
+    image: "/assets/uiuxdesign/1.webp",
+    bg: "bg-[#2a2540]",
+  },
+  {
+    title: "Website & UI/UX Design",
+    image: "/assets/uiuxdesign/2.webp",
+    bg: "bg-[#00323f]",
+  },
+  {
+    title: "Website & UI/UX Design",
+    image: "/assets/uiuxdesign/3.webp",
+    bg: "bg-[#00365c]",
+  },
+  {
+    title: "Website & UI/UX Design",
+    image: "/assets/uiuxdesign/4.webp",
+    bg: "bg-[#374151]",
+  },
+  {
+    title: "Website & UI/UX Design",
+    image: "/assets/uiuxdesign/5.webp",
+    bg: "bg-[#5b4636]",
+  },
+  {
+    title: "Website & UI/UX Design",
+    image: "/assets/uiuxdesign/6.webp",
+    bg: "bg-[#2a2540]",
+  },
+  {
+    title: "Website & UI/UX Design",
+    image: "/assets/uiuxdesign/7.webp",
+    bg: "bg-[#00323f]",
+  },
+  {
+    title: "Website & UI/UX Design",
+    image: "/assets/uiuxdesign/8.webp",
+    bg: "bg-[#00365c]",
+  },
+  {
+    title: "Website & UI/UX Design",
+    image: "/assets/uiuxdesign/9.webp",
+    bg: "bg-[#374151]",
+  },
+  {
+    title: "Website & UI/UX Design",
+    image: "/assets/uiuxdesign/10.webp",
+    bg: "bg-[#5b4636]",
+  },
+];
 
   const [activeCategory, setActiveCategory] = useState(
     "Website & UI/UX Design"
@@ -185,16 +185,32 @@ export default function WebsiteUIUXDesign() {
               business results.
             </p>
 
-            {/* BUTTON */}
-            <div className="mt-7 sm:mt-10">
-              <a
-                href="/contact"
-                className="w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-sm sm:text-base px-6 sm:px-10 py-4 rounded-full transition duration-300"
+             {/* BUTTON */}
+            <div className="mt-8">
+              <motion.a
+                href="tel:+233541728294"
+                initial={{ opacity: 0, y: 25, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                whileHover={{
+                  scale: 1.05,
+                  y: -3,
+                  boxShadow: "0px 18px 35px rgba(0,0,0,0.18)",
+                }}
+                whileTap={{ scale: 0.96 }}
+                className="group relative w-full sm:w-auto inline-flex justify-center items-center gap-3 px-6 sm:px-10 py-4 rounded-full bg-yellow-400 text-black font-semibold overflow-hidden transition"
               >
-                BOOK A CONSULTATION
+                {/* Shine Effect */}
+                <span className="absolute inset-0 bg-white/30 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 skew-x-12"></span>
 
-                <ArrowRight className="w-5 h-5 shrink-0" />
-              </a>
+                {/* Pulse Ring */}
+                <span className="absolute inset-0 rounded-full border border-yellow-300 animate-ping opacity-20"></span>
+
+                <span className="relative z-10">BOOK A CALL</span>
+
+                <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </motion.a>
             </div>
           </motion.div>
 
@@ -224,7 +240,7 @@ export default function WebsiteUIUXDesign() {
             {/* Main Card */}
             <div className="relative z-10 bg-[#374151] rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-5 shadow-2xl w-full max-w-xl mx-auto">
               <img
-                src="public/assets/uiuxdesign/hero.jpg"
+                src="/assets/uiuxdesign/hero.webp"
                 alt="Website & UI/UX Design"
                 className="rounded-xl sm:rounded-2xl w-full h-[220px] sm:h-[320px] md:h-[380px] object-cover"
               />
