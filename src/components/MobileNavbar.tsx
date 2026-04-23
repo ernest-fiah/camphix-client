@@ -148,8 +148,6 @@ export default function MobileNavbar() {
 
   return (
     <>
-      {/* PAGE SPACING */}
-      <div className="md:hidden" />
 
       {/* BOTTOM NAVBAR */}
       <div className="fixed bottom-0 left-0 w-full md:hidden z-[9999]">
