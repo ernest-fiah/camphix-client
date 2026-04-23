@@ -25,93 +25,338 @@ const projects = [
   {
     category: "Construction & Civil Engineering",
     bg: "bg-purple-500",
-    img: "https://duck.design/wp-content/uploads/2024/07/examples-9.png",
+    img: "public/assets/construction/2.jpg",
   },
   {
     category: "Construction & Civil Engineering",
     bg: "bg-orange-500",
-    img: "https://duck.design/wp-content/uploads/2024/07/examples-1-1.png",
+    img: "public/assets/construction/3.jpg",
+  },
+ {
+    category: "Construction & Civil Engineering",
+    bg: "bg-purple-500",
+    img: "public/assets/construction/4.jpg",
   },
   {
     category: "Construction & Civil Engineering",
-    bg: "bg-black",
-    img: "https://duck.design/wp-content/uploads/2024/07/examples-2-1.png",
+    bg: "bg-orange-500",
+    img: "public/assets/construction/5.jpg",
+  },
+ {
+    category: "Construction & Civil Engineering",
+    bg: "bg-purple-500",
+    img: "public/assets/construction/6.jpg",
   },
   {
     category: "Construction & Civil Engineering",
-    bg: "bg-red-500",
-    img: "https://duck.design/wp-content/uploads/2024/07/examples-6-1.png",
-  },
-  {
-    category: "Construction & Civil Engineering",
-    bg: "bg-lime-400",
-    img: "https://duck.design/wp-content/uploads/2024/07/examples-7-1.png",
-  },
-  {
-    category: "Construction & Civil Engineering",
-    bg: "bg-slate-900",
-    img: "https://duck.design/wp-content/uploads/2024/07/examples-8-1.png",
+    bg: "bg-orange-500",
+    img: "public/assets/construction/7.jpg",
   },
   {
     category: "Construction & Civil Engineering",
     bg: "bg-purple-500",
-    img: "https://duck.design/wp-content/uploads/2024/07/examples-9.png",
+    img: "public/assets/construction/8.jpg",
   },
   {
     category: "Construction & Civil Engineering",
     bg: "bg-orange-500",
-    img: "https://duck.design/wp-content/uploads/2024/07/examples-1-1.png",
+    img: "public/assets/construction/9.jpg",
   },
-  {
+ {
     category: "Construction & Civil Engineering",
-    bg: "bg-black",
-    img: "https://duck.design/wp-content/uploads/2024/07/examples-2-1.png",
+    bg: "bg-purple-500",
+    img: "public/assets/construction/10.jpg",
   },
 
+    {
+    category: "Construction & Civil Engineering",
+    bg: "bg-orange-500",
+    img: "public/assets/construction/11.jpg",
+  },
+ {
+    category: "Construction & Civil Engineering",
+    bg: "bg-purple-500",
+    img: "public/assets/construction/12.jpg",
+  },
+  {
+    category: "Construction & Civil Engineering",
+    bg: "bg-orange-500",
+    img: "public/assets/construction/13.jpg",
+  },
+  {
+    category: "Construction & Civil Engineering",
+    bg: "bg-purple-500",
+    img: "public/assets/construction/14.jpg",
+  },
+  {
+    category: "Construction & Civil Engineering",
+    bg: "bg-orange-500",
+    img: "public/assets/construction/15.jpg",
+  },
+ {
+    category: "Construction & Civil Engineering",
+    bg: "bg-purple-500",
+    img: "public/assets/construction/16.jpg",
+  },
+    {
+    category: "Construction & Civil Engineering",
+    bg: "bg-purple-500",
+    img: "public/assets/construction/17.jpg",
+  },
+  {
+    category: "Construction & Civil Engineering",
+    bg: "bg-orange-500",
+    img: "public/assets/construction/18.jpg",
+  },
+ {
+    category: "Construction & Civil Engineering",
+    bg: "bg-purple-500",
+    img: "public/assets/construction/19.jpg",
+  },
   {
     category: "Land Surveying & Consultancy",
     bg: "bg-purple-500",
-    img: "https://duck.design/wp-content/uploads/2024/07/examples-9.png",
-  },
-  {
-    category: "Land Surveying & Consultancy",
-    bg: "bg-orange-500",
-    img: "https://duck.design/wp-content/uploads/2024/07/examples-1-1.png",
-  },
-  {
-    category: "Land Surveying & Consultancy",
-    bg: "bg-black",
-    img: "https://duck.design/wp-content/uploads/2024/07/examples-2-1.png",
-  },
-  {
-    category: "Land Surveying & Consultancy",
-    bg: "bg-red-500",
-    img: "https://duck.design/wp-content/uploads/2024/07/examples-6-1.png",
-  },
-  {
-    category: "Land Surveying & Consultancy",
-    bg: "bg-lime-400",
-    img: "https://duck.design/wp-content/uploads/2024/07/examples-7-1.png",
-  },
-  {
-    category: "Land Surveying & Consultancy",
-    bg: "bg-slate-900",
-    img: "https://duck.design/wp-content/uploads/2024/07/examples-8-1.png",
+    img: "public/assets/construction/land-surveying/1.jpg",
   },
   {
     category: "Land Surveying & Consultancy",
     bg: "bg-purple-500",
-    img: "https://duck.design/wp-content/uploads/2024/07/examples-9.png",
+    img: "public/assets/construction/land-surveying/2.jpg",
   },
   {
     category: "Land Surveying & Consultancy",
+    bg: "bg-purple-500",
+    img: "public/assets/construction/land-surveying/3.jpg",
+  },
+  {
+    category: "Land Surveying & Consultancy",
+    bg: "bg-purple-500",
+    img: "public/assets/construction/land-surveying/4.jpg",
+  },
+  {
+    category: "Land Surveying & Consultancy",
+    bg: "bg-purple-500",
+    img: "public/assets/construction/land-surveying/5.jpg",
+  },
+  {
+    category: "Land Surveying & Consultancy",
+    bg: "bg-purple-500",
+    img: "public/assets/construction/land-surveying/6.jpg",
+  },
+  {
+    category: "Architectural Design",
     bg: "bg-orange-500",
-    img: "https://duck.design/wp-content/uploads/2024/07/examples-1-1.png",
+    img: "public/assets/architectural-design/1.jpg",
   },
   {
-    category: "Land Surveying & Consultancy",
-    bg: "bg-black",
-    img: "https://duck.design/wp-content/uploads/2024/07/examples-2-1.png",
+    category: "Architectural Design",
+    bg: "bg-orange-500",
+    img: "public/assets/architectural-design/2.jpg",
+  },
+  {
+    category: "Architectural Design",
+    bg: "bg-orange-500",
+    img: "public/assets/architectural-design/3.jpg",
+  },
+  {
+    category: "Architectural Design",
+    bg: "bg-orange-500",
+    img: "public/assets/architectural-design/4.jpg",
+  },
+  {
+    category: "Architectural Design",
+    bg: "bg-orange-500",
+    img: "public/assets/architectural-design/5.jpg",
+  },
+  {
+    category: "Architectural Design",
+    bg: "bg-orange-500",
+    img: "public/assets/architectural-design/6.jpg",
+  },
+  {
+    category: "Architectural Design",
+    bg: "bg-orange-500",
+    img: "public/assets/architectural-design/7.jpg",
+  },
+  {
+    category: "Architectural Design",
+    bg: "bg-orange-500",
+    img: "public/assets/architectural-design/8.jpg",
+  },
+  {
+    category: "Architectural Design",
+    bg: "bg-orange-500",
+    img: "public/assets/architectural-design/9.jpg",
+  },
+  {
+    category: "Real Estate Development",
+    bg: "bg-purple-500",
+    img: "public/assets/real-estate-development/1.jpg",
+  },
+  {
+    category: "Real Estate Development",
+    bg: "bg-purple-500",
+    img: "public/assets/real-estate-development/2.jpg",
+  },
+  {
+    category: "Real Estate Development",
+    bg: "bg-purple-500",
+    img: "public/assets/real-estate-development/3.jpg",
+  },
+  {
+    category: "Real Estate Development",
+    bg: "bg-purple-500",
+    img: "public/assets/real-estate-development/4.jpg",
+  },
+  {
+    category: "Real Estate Development",
+    bg: "bg-purple-500",
+    img: "public/assets/real-estate-development/5.jpg",
+  },
+  {
+    category: "Real Estate Development",
+    bg: "bg-purple-500",
+    img: "public/assets/real-estate-development/6.jpg",
+  },
+  {
+    category: "Real Estate Development",
+    bg: "bg-purple-500",
+    img: "public/assets/real-estate-development/7.jpg",
+  },
+  {
+    category: "Real Estate Development",
+    bg: "bg-purple-500",
+    img: "public/assets/real-estate-development/8.jpg",
+  },
+  {
+    category: "Real Estate Development",
+    bg: "bg-purple-500",
+    img: "public/assets/real-estate-development/9.jpg",
+  },
+  {
+    category: "Project Management",
+    bg: "bg-orange-500",
+    img: "public/assets/project-management/1.jpg",
+  },
+  {
+    category: "Project Management",
+    bg: "bg-orange-500",
+    img: "public/assets/project-management/2.jpg",
+  },
+  {
+    category: "Project Management",
+    bg: "bg-orange-500",
+    img: "public/assets/project-management/3.jpg",
+  },
+  {
+    category: "Building Materials Supply",
+    bg: "bg-orange-500",
+    img: "public/assets/building-materials-supply/1.jpg",
+  },
+  {
+    category: "Building Materials Supply",
+    bg: "bg-orange-500",
+    img: "public/assets/building-materials-supply/2.jpg",
+  },
+  {
+    category: "Building Materials Supply",
+    bg: "bg-orange-500",
+    img: "public/assets/building-materials-supply/3.jpg",
+  },
+  {
+    category: "Building Materials Supply",
+    bg: "bg-orange-500",
+    img: "public/assets/building-materials-supply/4.jpg",
+  },
+  {
+    category: "Building Materials Supply",
+    bg: "bg-orange-500",
+    img: "public/assets/building-materials-supply/5.jpg",
+  },
+  {
+    category: "Building Materials Supply",
+    bg: "bg-orange-500",
+    img: "public/assets/building-materials-supply/6.jpg",
+  },
+  {
+    category: "Building Materials Supply",
+    bg: "bg-orange-500",
+    img: "public/assets/building-materials-supply/7.jpg",
+  },
+  {
+    category: "Building Materials Supply",
+    bg: "bg-orange-500",
+    img: "public/assets/building-materials-supply/8.jpg",
+  },
+  {
+    category: "Building Materials Supply",
+    bg: "bg-orange-500",
+    img: "public/assets/building-materials-supply/9.jpg",
+  },
+  {
+    category: "Electrical & Mechanical Works",
+    bg: "bg-orange-500",
+    img: "public/assets/electrical-&-mechanical-works/1.jpg",
+  },
+  {
+    category: "Electrical & Mechanical Works",
+    bg: "bg-orange-500",
+    img: "public/assets/electrical-&-mechanical-works/2.jpg",
+  },
+  {
+    category: "Electrical & Mechanical Works",
+    bg: "bg-orange-500",
+    img: "public/assets/electrical-&-mechanical-works/3.jpg",
+  },
+  {
+    category: "Electrical & Mechanical Works",
+    bg: "bg-orange-500",
+    img: "public/assets/electrical-&-mechanical-works/4.jpg",
+  },
+  {
+    category: "Electrical & Mechanical Works",
+    bg: "bg-orange-500",
+    img: "public/assets/electrical-&-mechanical-works/5.jpg",
+  },
+  {
+    category: "Electrical & Mechanical Works",
+    bg: "bg-orange-500",
+    img: "public/assets/electrical-&-mechanical-works/6.jpg",
+  },
+  {
+    category: "Procurement & Logistics",
+    bg: "bg-purple-500",
+    img: "public/assets/procurement-logistics/1.jpg",
+  },
+  {
+    category: "Procurement & Logistics",
+    bg: "bg-purple-500",
+    img: "public/assets/procurement-logistics/2.jpg",
+  },
+  {
+    category: "Procurement & Logistics",
+    bg: "bg-purple-500",
+    img: "public/assets/procurement-logistics/3.jpg",
+  },
+  {
+    category: "Procurement & Logistics",
+    bg: "bg-purple-500",
+    img: "public/assets/procurement-logistics/4.jpg",
+  },
+  {
+    category: "Procurement & Logistics",
+    bg: "bg-purple-500",
+    img: "public/assets/procurement-logistics/5.jpg",
+  },
+  {
+    category: "Procurement & Logistics",
+    bg: "bg-purple-500",
+    img: "public/assets/procurement-logistics/6.jpg",
+  },
+  {
+    category: "Procurement & Logistics",
+    bg: "bg-purple-500",
+    img: "public/assets/procurement-logistics/7.jpg",
   },
 ];
 

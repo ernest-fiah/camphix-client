@@ -1,116 +1,75 @@
 import { motion } from "framer-motion";
+import { Mail, PhoneCall, ArrowRight } from "lucide-react";
 
-export default function callToAction() {
-    const users = [
-        {
-            name: "Kwame Mensah",
-            role: "Project Manager – Construction",
-            img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=100",
-            email: "kwame@camphixenterprise.com",
-            phone: "+233501234567",
-        },
-        {
-            name: "Ama Boateng",
-            role: "Architectural Designer",
-            img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=100",
-            email: "ama@camphixenterprise.com",
-            phone: "+233501234568",
-        },
-        {
-            name: "Kofi Owusu",
-            role: "Civil Engineer",
-            img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100",
-            email: "kofi@camphixenterprise.com",
-            phone: "+233501234569",
-        },
-        {
-            name: "Abena Mensah",
-            role: "Land Surveyor",
-            img: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=100",
-            email: "abena@camphixenterprise.com",
-            phone: "+233501234570",
-        },
-        {
-            name: "Yaw Adjei",
-            role: "Real Estate Developer",
-            img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100",
-            email: "yaw@camphixenterprise.com",
-            phone: "+233501234571",
-        },
-        {
-            name: "Esi Johnson",
-            role: "Procurement & Logistics Lead",
-            img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=100",
-            email: "esi@camphixenterprise.com",
-            phone: "+233501234572",
-        },
-    ];
+export default function CallToAction() {
+  const user = {
+  email: "camphixcompany@gmail.com",
+  phone: "+233541728294",
+};
 
-    return (
-        <div className="flex items-center justify-center px-6 py-12">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  return (
+    <section className="relative w-full py-24 px-6 bg-white overflow-hidden">
 
-                {users.map((user, index) => (
-                    <motion.div
-                        key={index}
+      {/* SOFT GRAY BACKGROUND STYLE (same vibe as Our Story) */}
+      <div className="absolute inset-0">
+        <div className="absolute top-[-120px] right-[-120px] w-[420px] h-[420px] bg-gray-200 rounded-full blur-3xl opacity-40" />
+        <div className="absolute bottom-[-120px] left-[-120px] w-[450px] h-[450px] bg-gray-100 rounded-full blur-3xl opacity-60" />
+      </div>
 
-                        /* ✅ scroll-up premium reveal */
-                        initial={{ opacity: 0, y: 40, scale: 0.97 }}
-                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                        viewport={{ once: true, amount: 0.2 }}
-                        transition={{
-                            duration: 0.6,
-                            ease: [0.22, 1, 0.36, 1],
-                            delay: index * 0.06,
-                        }}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.7 }}
+        className="relative max-w-5xl mx-auto text-center"
+      >
 
-                        className="w-80 border border-gray-300 rounded-lg divide-y divide-gray-300 mt-10"
-                    >
-                        {/* HEADER */}
-                        <div className="flex items-start justify-between p-4">
-                            <div>
-                                <div className="flex items-center gap-2">
-                                    <h2 className="text-base font-medium text-gray-800">
-                                        {user.name}
-                                    </h2>
-                                    <span className="text-xs px-2 py-0.5 border border-green-400/40 text-green-600 rounded-full">
-                                        Camphix
-                                    </span>
-                                </div>
-                                <p className="text-sm text-gray-500">{user.role}</p>
-                            </div>
+        {/* TITLE */}
+        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+          Let’s Build Something{" "}
+          <span className="bg-gradient-to-r from-gray-300 via-gray-500 to-gray-700 bg-clip-text text-transparent">
+            Great Together
+          </span>
+        </h2>
 
-                            <img
-                                src={user.img}
-                                alt={user.name}
-                                className="h-10 w-10 rounded-full"
-                            />
-                        </div>
+        {/* DESCRIPTION */}
+        <p className="mt-5 text-gray-500 text-sm md:text-base max-w-2xl mx-auto">
+          We specialize in construction, engineering, design, and digital solutions.
+          Let’s turn your ideas into reality with precision and quality.
+        </p>
 
-                        {/* CTA */}
-                        <div className="flex divide-x divide-gray-300">
+        {/* BUTTONS */}
+        <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
 
-                            {/* EMAIL */}
-                            <a
-                                href={`mailto:${user.email}`}
-                                className="w-1/2 py-3 flex items-center justify-center text-sm text-gray-600 hover:text-black transition"
-                            >
-                                📧 Email
-                            </a>
+          {/* CALL BUTTON (NEUTRAL PREMIUM STYLE) */}
+          <a
+            href={`tel:${user.phone}`}
+            className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-gray-700 to-gray-900 text-white font-medium shadow-sm hover:shadow-md transition overflow-hidden"
+          >
+            <span className="absolute inset-0 bg-white/10 translate-x-[-120%] group-hover:translate-x-[120%] transition-transform duration-700"></span>
+            <PhoneCall className="w-4 h-4" />
+            Call Now
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
+          </a>
 
-                            {/* CALL */}
-                            <a
-                                href={`tel:${user.phone}`}
-                                className="w-1/2 py-3 flex items-center justify-center text-sm text-gray-600 hover:text-black transition"
-                            >
-                                📞 Call
-                            </a>
+          {/* EMAIL BUTTON */}
+          <a
+            href={`mailto:${user.email}`}
+            className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-gray-300 text-gray-700 hover:bg-gray-900 hover:text-white transition"
+          >
+            <Mail className="w-4 h-4" />
+            Send Email
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
+          </a>
 
-                        </div>
-                    </motion.div>
-                ))}
-
-            </div>
         </div>
-    );
+
+        {/* FOOTER */}
+        <p className="mt-8 text-xs text-gray-400">
+          Fast response • Professional service • Ghana-based team
+        </p>
+
+      </motion.div>
+    </section>
+  );
 }

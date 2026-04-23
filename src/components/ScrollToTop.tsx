@@ -8,5 +8,7 @@ export default function ScrollToTop() {
     window.scrollTo({ top: 0, behavior: "auto" });
   }, [pathname]);
 
+  
+
   return null;
 }

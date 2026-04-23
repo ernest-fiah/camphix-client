@@ -4,91 +4,91 @@ import { motion } from "framer-motion";
 const services = [
   {
     title: "Construction & Civil Engineering",
-    img: "https://duck.design/wp-content/uploads/2025/01/service-card.jpg",
-    href: "/services/graphic-design",
+    img: "public/assets/services/construction-&-civil-engineering.jpg",
+    href: "construction-&-civil-engineering",
     textColor: "text-black",
   },
   {
     title: "Land Surveying & Consultancy",
-    img: "https://duck.design/wp-content/uploads/2025/01/service-card-1.jpg",
-    href: "/services/motion-graphics",
+    img: "public/assets/services/land-surveying-&-consultancy.jpg",
+    href: "/land-surveying-&-consultancy",
     textColor: "text-black",
   },
   {
     title: "Architectural Design",
-    img: "https://duck.design/wp-content/uploads/2025/01/service-card-2.jpg",
+    img: "public/assets/services/architectural-design.jpg",
     large: true,
-    href: "/services/brand-identity",
+    href: "/architectural-design",
     textColor: "text-white",
   },
   {
     title: "Real Estate Development",
-    img: "https://duck.design/wp-content/uploads/2025/01/service-card-5.jpg",
-    href: "/services/ui-ux",
+    img: "public/assets/services/real-estate-development.jpg",
+    href: "/real-estate-development",
     textColor: "text-black",
   },
   {
     title: "Project Management",
-    img: "https://duck.design/wp-content/uploads/2025/01/service-card-7.jpg",
+    img: "public/assets/services/project-management.jpg",
     large: true,
-    href: "/services/web-design",
+    href: "/project-management",
     textColor: "text-white",
   },
   {
     title: "Building Materials Supply",
-    img: "https://duck.design/wp-content/uploads/2025/01/service-card.jpg",
-    href: "/services/graphic-design",
+    img: "public/assets/services/building-materials-supply.jpg",
+    href: "/building-materials-supply",
     textColor: "text-black",
   },
   {
     title: "Electrical & Mechanical Works",
-    img: "https://duck.design/wp-content/uploads/2025/01/service-card-1.jpg",
-    href: "/services/motion-graphics",
+    img: "public/assets/services/electrical-&-mechanical-work.jpg",
+    href: "/electrical-mechanical",
     textColor: "text-black",
   },
   {
     title: "Graphic Design & Branding",
-    img: "https://duck.design/wp-content/uploads/2025/01/service-card-2.jpg",
+    img: "public/assets/services/graphic-design-&-branding.jpg",
     large: true,
-    href: "/services/brand-identity",
+    href: "/graphic-design-&-branding",
     textColor: "text-white",
   },
   {
     title: "Videography & Media Production",
-    img: "https://duck.design/wp-content/uploads/2025/01/service-card-5.jpg",
-    href: "/services/ui-ux",
+    img: "public/assets/services/videography-&-media Production.jpg",
+    href: "/videography-media-production",
     textColor: "text-black",
   },
   {
     title: "Digital Marketing",
-    img: "https://duck.design/wp-content/uploads/2025/01/service-card-7.jpg",
+    img: "public/assets/services/digital-marketing.jpg",
     large: true,
-    href: "/services/web-design",
+    href: "/digital-marketing",
     textColor: "text-white",
   },
   {
     title: "Website & UI/UX Design",
-    img: "https://duck.design/wp-content/uploads/2025/01/service-card.jpg",
-    href: "/services/graphic-design",
+    img: "public/assets/services/website-&-design.jpg",
+    href: "/web-uiux",
     textColor: "text-black",
   },
   {
     title: "Printing & Production",
-    img: "https://duck.design/wp-content/uploads/2025/01/service-card-1.jpg",
-    href: "/services/motion-graphics",
+    img: "public/assets/services/printing-&-production.jpg",
+    href: "/printing-production",
     textColor: "text-black",
   },
   {
     title: "Procurement & Logistics",
-    img: "https://duck.design/wp-content/uploads/2025/01/service-card-2.jpg",
+    img: "public/assets/services/procurement-&-logistics.jpg",
     large: true,
-    href: "/services/brand-identity",
+    href: "/procurement-logistics",
     textColor: "text-white",
   },
   {
     title: "Strategic Consultancy",
-    img: "https://duck.design/wp-content/uploads/2025/01/service-card-5.jpg",
-    href: "/services/ui-ux",
+    img: "public/assets/services/strategic-consultancy.jpg",
+    href: "/strategic-consultancy",
     textColor: "text-black",
   },
 ];
@@ -102,7 +102,6 @@ const OurServices = () => {
       transition={{ duration: 0.6 }}
       className="w-full py-7 "
     >
-
       <motion.h2
         initial={{ opacity: 0, y: 30, scale: 0.95 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -136,15 +135,57 @@ const OurServices = () => {
           border-radius: 7px;
           flex-shrink: 0;
           cursor: pointer;
-          transition: transform 0.3s ease;
+          transition: transform 0.35s ease;
+        }
+
+        .card:hover {
+          transform: translateY(-6px) scale(1.01);
+        }
+
+        .card::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(to top, rgba(0,0,0,0.78), rgba(0,0,0,0.08), transparent);
+          z-index: 1;
+        }
+
+        .card::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            120deg,
+            transparent 20%,
+            rgba(255,255,255,0.12) 45%,
+            transparent 70%
+          );
+          transform: translateX(-140%);
+          transition: transform 0.8s ease;
+          z-index: 2;
+        }
+
+        .card:hover::after {
+          transform: translateX(140%);
         }
 
         .card-text {
           position: absolute;
           color: white;
-          font-weight: 9000;
+          font-weight: 900;
           left: 29px;
-          bottom: 48px;
+          bottom: 90px;
+          z-index: 3;
+          max-width: 80%;
+          font-size: 28px;
+          line-height: 1.1;
+        }
+
+        .service-btn {
+          position: absolute;
+          left: 29px;
+          bottom: 34px;
+          z-index: 3;
         }
 
         .big-gap {
@@ -155,7 +196,6 @@ const OurServices = () => {
       {/* MARQUEE */}
       <div className="overflow-hidden">
         <div className="marquee">
-
           {[...services, ...services].map((item, index, arr) => {
             const isLarge = item.large;
             const prev = arr[index - 1];
@@ -170,7 +210,7 @@ const OurServices = () => {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                className={`card ${addSpacing}`}
+                className={`card group ${addSpacing}`}
                 style={{
                   width: isLarge ? "672px" : "336px",
                   height: "384px",
@@ -185,10 +225,37 @@ const OurServices = () => {
                 <div className="card-text">
                   {item.title}
                 </div>
+
+                {/* BUTTON LIKE BOOK A CALL */}
+                <div className="service-btn">
+                  <span className="relative group/btn overflow-hidden inline-flex items-center gap-2 px-5 py-2 text-white rounded-lg bg-red-600 hover:bg-red-700 transition">
+                    {/* BUTTON GLOW */}
+                    <span className="absolute inset-0 bg-gradient-to-r from-yellow-400/0 via-white/10 to-red-500/0 translate-x-[-120%] group-hover/btn:translate-x-[120%] transition-transform duration-700"></span>
+
+                    {/* TEXT */}
+                    <span className="relative overflow-hidden h-6 flex items-center">
+                      <span className="block transition-all duration-300 ease-out group-hover/btn:-translate-y-full group-hover/btn:opacity-0 text-sm font-medium">
+                        Explore
+                      </span>
+
+                      <span className="absolute left-0 top-0 translate-y-full opacity-0 transition-all duration-300 ease-out group-hover/btn:translate-y-0 group-hover/btn:opacity-100 text-sm font-medium">
+                        Explore
+                      </span>
+
+                      {/* UNDERLINE */}
+                      <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-yellow-400 transition-all duration-300 group-hover/btn:w-full"></span>
+                    </span>
+
+                    {/* ICON */}
+                    <ArrowRight className="relative w-4 h-4 transition-all duration-300 ease-out group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 group-hover/btn:rotate-12" />
+
+                    {/* BORDER */}
+                    <span className="absolute inset-0 rounded-lg border border-white/10 group-hover/btn:border-yellow-400/70 transition-all duration-300"></span>
+                  </span>
+                </div>
               </motion.a>
             );
           })}
-
         </div>
       </div>
 
@@ -201,17 +268,14 @@ const OurServices = () => {
         className="text-center mt-15 mb-2"
       >
         <a
-          href="/services"
+          href="/portfolio"
           className="inline-flex items-center gap-2 px-15 py-5 text-[1.2rem] border rounded-full hover:bg-black hover:text-white transition cursor-pointer group"
         >
           All Services
 
-          <ArrowRight
-            className="size-5 transition-transform duration-300 group-hover:translate-x-1"
-          />
+          <ArrowRight className="size-5 transition-transform duration-300 group-hover:translate-x-1" />
         </a>
       </motion.div>
-
     </motion.div>
   );
 };

@@ -1,37 +1,50 @@
 import { ArrowRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-export default function OurWorks() {
-  const works: string[] = [
-    "https://duck.design/wp-content/uploads/2024/07/examples-9.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-1-1.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-2-1.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-6-1.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-7-1.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-8-1.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-9-1.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-11.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-12.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-17.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-18.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-20.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-3-1.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-4-1.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-5-1.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-10.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-15.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-19-1.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-13.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-14.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-16.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-21.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-22.png",
-    "https://duck.design/wp-content/uploads/2024/07/examples-23.png",
-  ];
+const categories = ["All", "Construction", "Flyers"];
 
+export default function OurWorks() {
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const [startAnimation, setStartAnimation] = useState(false);
+  const [active, setActive] = useState("All");
 
+  const works = [
+    // =========================
+    // CONSTRUCTION PROJECTS
+    // =========================
+    { img: "public/assets/construction/8.jpg", category: "Construction" },
+    { img: "public/assets/construction/9.jpg", category: "Construction" },
+    { img: "public/assets/construction/10.jpg", category: "Construction" },
+    { img: "public/assets/construction/11.jpg", category: "Construction" },
+    { img: "public/assets/construction/12.jpg", category: "Construction" },
+    { img: "public/assets/construction/13.jpg", category: "Construction" },
+    { img: "public/assets/construction/14.jpg", category: "Construction" },
+    { img: "public/assets/construction/15.jpg", category: "Construction" },
+    { img: "public/assets/construction/16.jpg", category: "Construction" },
+    { img: "public/assets/construction/17.jpg", category: "Construction" },
+    { img: "public/assets/construction/18.jpg", category: "Construction" },
+    { img: "public/assets/construction/19.jpg", category: "Construction" },
+    { img: "public/assets/construction/2.jpg", category: "Construction" },
+
+    // =========================
+    // FLYER DESIGNS
+    // =========================
+    { img: "/assets/camphix-flyers/1.jpg", category: "Flyers" },
+    { img: "/assets/camphix-flyers/2.jpg", category: "Flyers" },
+    { img: "/assets/camphix-flyers/3.jpg", category: "Flyers" },
+    { img: "/assets/camphix-flyers/4.jpg", category: "Flyers" },
+    { img: "/assets/camphix-flyers/5.jpg", category: "Flyers" },
+    { img: "/assets/camphix-flyers/6.jpg", category: "Flyers" },
+    { img: "/assets/camphix-flyers/7.jpg", category: "Flyers" },
+    { img: "/assets/camphix-flyers/8.jpg", category: "Flyers" },
+    { img: "/assets/camphix-flyers/9.jpg", category: "Flyers" },
+    { img: "/assets/camphix-flyers/10.jpg", category: "Flyers" },
+    { img: "/assets/camphix-flyers/11.jpg", category: "Flyers" },
+  ];
+
+  // =========================
+  // SCROLL ANIMATION TRIGGER
+  // =========================
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -39,198 +52,162 @@ export default function OurWorks() {
           setStartAnimation(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
 
-    if (sectionRef.current) observer.observe(sectionRef.current);
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
 
     return () => {
-      if (sectionRef.current) observer.unobserve(sectionRef.current);
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
     };
   }, []);
 
+  // =========================
+  // RESET ANIMATION ON FILTER CHANGE
+  // =========================
+  useEffect(() => {
+    setStartAnimation(false);
+
+    const timer = setTimeout(() => {
+      setStartAnimation(true);
+    }, 80);
+
+    return () => clearTimeout(timer);
+  }, [active]);
+
+  // =========================
+  // FILTERED DATA
+  // =========================
+  const filtered =
+    active === "All"
+      ? works
+      : works.filter((item) => item.category === active);
+
   return (
-    <div ref={sectionRef} className="ourworks w-full py-7">
-
-      {/* STYLE */}
+    <div
+      ref={sectionRef}
+      className="w-full py-20 px-4 md:px-10 lg:px-20 bg-white"
+    >
+      {/* =========================
+          STYLE (MASONRY LAYOUT)
+      ========================= */}
       <style>{`
-        .ourworks .marquee {
-          display: flex;
-          width: max-content;
-          gap: 18px;
-          animation: scroll 480s linear infinite;
-          animation-play-state: paused;
+        .masonry {
+          column-count: 1;
+          column-gap: 18px;
         }
 
-        .ourworks .marquee.start {
-          animation-play-state: running;
+        @media (min-width: 640px) {
+          .masonry {
+            column-count: 2;
+          }
         }
 
-        .ourworks .marquee:hover {
-          animation-play-state: paused;
+        @media (min-width: 1024px) {
+          .masonry {
+            column-count: 3;
+          }
         }
 
-        .ourworks .marquee-reverse {
-          display: flex;
-          width: max-content;
-          gap: 18px;
-          animation: scrollReverse 500s linear infinite;
-          animation-play-state: paused;
-        }
-
-        .ourworks .marquee-reverse.start {
-          animation-play-state: running;
-        }
-
-        .ourworks .marquee-reverse:hover {
-          animation-play-state: paused;
-        }
-
-        .ourworks .work-card {
-          flex-shrink: 0;
+        .item {
+          break-inside: avoid;
+          margin-bottom: 18px;
+          border-radius: 14px;
           overflow: hidden;
-          border-radius: 6px;
 
           opacity: 0;
-          transform: translateY(60px) scale(0.96);
-          transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
-                      transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
-          will-change: transform, opacity;
+          transform: translateY(25px);
+          transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
-        .ourworks .work-card.show {
+        .item.show {
           opacity: 1;
-          transform: translateY(0) scale(1);
+          transform: translateY(0);
         }
 
-        /* ✅ NEW: title + button reveal animation */
-        .ourworks .reveal {
-          opacity: 0;
-          transform: translateY(40px) scale(0.97);
-          transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
-                      transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
-          will-change: transform, opacity;
+        .item img {
+          width: 100%;
+          height: auto; /* IMPORTANT: keeps original image ratio */
+          display: block;
+          transition: transform 0.5s ease;
         }
 
-        .ourworks .reveal.show {
-          opacity: 1;
-          transform: translateY(0) scale(1);
+        .item:hover img {
+          transform: scale(1.04);
         }
 
-        @keyframes scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-
-        @keyframes scrollReverse {
-          0% { transform: translateX(-50%); }
-          100% { transform: translateX(0); }
+        .btn {
+          transition: all 0.3s ease;
         }
       `}</style>
 
-      {/* TITLE */}
-      <h2
-        className={`text-4xl font-bold text-center mb-12 bg-gradient-to-r from-slate-900 to-[#6D8FE4] text-transparent bg-clip-text reveal ${
-          startAnimation ? "show" : ""
-        }`}
-        style={{ transitionDelay: "0ms" }}
-      >
-        Our Works
-      </h2>
+      {/* =========================
+          HEADER
+      ========================= */}
+      <div className="text-center max-w-4xl mx-auto">
+        <h2 className="text-4xl md:text-6xl font-bold text-slate-900">
+          Our Works Gallery
+        </h2>
 
-      {/* MOBILE */}
-      <div className="md:hidden flex justify-center">
-        <div className="grid grid-cols-2 gap-3 w-full max-w-md px-4">
-          {works.slice(0, 14).map((img, i) => (
-            <div
-              key={i}
-              className={`work-card overflow-hidden rounded-sm ${
-                startAnimation ? "show" : ""
-              }`}
-              style={{
-                transitionDelay: `${i * 90}ms`,
-              }}
-            >
-              <img
-                src={img}
-                alt="work"
-                className="w-full h-[140px] object-cover"
-              />
-            </div>
-          ))}
-        </div>
+        <p className="mt-5 text-slate-600 text-lg">
+          A collection of Construction projects and Graphic Design works
+        </p>
       </div>
 
-      {/* DESKTOP */}
-      <div className="hidden md:block">
-
-        {/* TOP */}
-        <div className="overflow-hidden mb-4">
-          <div className={`marquee ${startAnimation ? "start" : ""}`}>
-            {[...works, ...works].map((img, i) => (
-              <div
-                key={i}
-                className={`work-card ${
-                  startAnimation ? "show" : ""
-                }`}
-                style={{
-                  width: "400px",
-                  height: "270px",
-                  transitionDelay: `${i * 70}ms`,
-                }}
-              >
-                <img
-                  src={img}
-                  alt="work"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* BOTTOM */}
-        <div className="overflow-hidden">
-          <div className={`marquee-reverse ${startAnimation ? "start" : ""}`}>
-            {[...works, ...works].map((img, i) => (
-              <div
-                key={i}
-                className={`work-card ${
-                  startAnimation ? "show" : ""
-                }`}
-                style={{
-                  width: "400px",
-                  height: "270px",
-                  transitionDelay: `${i * 70}ms`,
-                }}
-              >
-                <img
-                  src={img}
-                  alt="work"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* =========================
+          FILTER BUTTONS
+      ========================= */}
+      <div className="flex flex-wrap justify-center gap-3 mt-10">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setActive(cat)}
+            className={`btn px-5 py-2 rounded-full border text-sm md:text-base ${
+              active === cat
+                ? "bg-black text-white border-black"
+                : "border-gray-400 text-gray-700 hover:bg-gray-100"
+            }`}
+          >
+            {cat}
+          </button>
+        ))}
       </div>
 
-      {/* BUTTON */}
-      <div
-        className={`text-center mt-15 reveal ${
-          startAnimation ? "show" : ""
-        }`}
-        style={{ transitionDelay: "200ms" }}
-      >
+      {/* =========================
+          MASONRY GALLERY
+      ========================= */}
+      <div className="masonry mt-14">
+        {filtered.map((item, i) => (
+          <div
+            key={i}
+            className={`item ${startAnimation ? "show" : ""}`}
+            style={{ transitionDelay: `${i * 60}ms` }}
+          >
+            <img
+              src={item.img}
+              alt={`work-${i}`}
+              loading="lazy"
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* =========================
+          CTA BUTTON
+      ========================= */}
+      <div className="text-center mt-20">
         <a
-          href="/services"
-          className="inline-flex items-center gap-2 px-15 py-5 text-[1.2rem] border rounded-full hover:bg-black hover:text-white transition cursor-pointer group"
+          href="/portfolio"
+          className="inline-flex items-center gap-2 px-10 py-4 text-lg border border-black rounded-full hover:bg-black hover:text-white transition group"
         >
-          See All Works
-          <ArrowRight className="size-5 transition-transform duration-300 group-hover:translate-x-1" />
+          View Full Portfolio
+          <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
         </a>
       </div>
-
     </div>
   );
 }

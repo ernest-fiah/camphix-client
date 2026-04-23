@@ -58,13 +58,13 @@ export default function AboutOwner() {
           className="text-center"
         >
           <img
-            src="https://enspirefx.com/wp-content/uploads/2025/06/Dennis-Gyamfi-Bediako.jpg.webp"
+            src="public/assets/owner.jpg"
             alt="Founder"
             className="w-full max-w-md mx-auto shadow-md"
           />
 
           <p className="text-xs text-zinc-500 mt-3 italic">
-            Rev. Dennis Gyamfi Bediako — CEO, EnspireFX Websites
+            Joseph Mensah Sarbah— CEO, Camphix Websites
           </p>
         </motion.div>
 

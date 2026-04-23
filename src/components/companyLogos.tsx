@@ -2,13 +2,15 @@ import { motion } from "framer-motion";
 
 const CompanyLogos = () => {
   const companyLogos = [
-    "slack",
-    "framer",
-    "netflix",
-    "google",
-    "linkedin",
-    "instagram",
-    "facebook"
+    "public/assets/trustedBrands/1.png",
+    "public/assets/trustedBrands/2.png",
+    "public/assets/trustedBrands/3.png",
+    "public/assets/trustedBrands/4.png",
+    "public/assets/trustedBrands/5.png",
+    "public/assets/trustedBrands/7.png",
+    "public/assets/trustedBrands/8.png",
+    "public/assets/trustedBrands/9.png",
+    "public/assets/trustedBrands/10.png",
   ];
 
   return (
@@ -32,38 +34,32 @@ const CompanyLogos = () => {
       <motion.div
         initial={{ opacity: 0, y: 40, scale: 0.95 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6 }}
-        className="overflow-hidden w-full relative max-w-5xl mx-auto select-none py-6"
+        className="overflow-hidden w-full relative max-w-5xl mx-auto py-6"
       >
+        {/* Left Fade */}
+        <div className="absolute left-0 top-0 h-full w-20 z-10 bg-gradient-to-r from-white to-transparent" />
 
-        {/* LEFT GRADIENT */}
-        <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent" />
-
-        {/* MARQUEE */}
+        {/* Marquee */}
         <div
-          className="marquee-inner flex will-change-transform min-w-[200%]"
-          style={{ animationDuration: "50s" }}
+          className="marquee-inner flex min-w-[200%]"
+          style={{ animationDuration: "35s" }}
         >
           <div className="flex">
-            {[...companyLogos, ...companyLogos].map((company, index) => (
-              <motion.img
+            {[...companyLogos, ...companyLogos].map((logo, index) => (
+              <img
                 key={index}
-                src={`https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/${company}.svg`}
-                alt={company}
-                className="h-10 w-auto mx-6 object-contain"
+                src={logo}
+                alt="Company Logo"
+                className="h-10 w-auto mx-8 object-contain"
                 draggable={false}
-                initial={{ opacity: 0, y: 20, scale: 0.9 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
               />
             ))}
           </div>
         </div>
 
-        {/* RIGHT GRADIENT */}
-        <div className="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-white to-transparent" />
+        {/* Right Fade */}
+        <div className="absolute right-0 top-0 h-full w-20 z-10 bg-gradient-to-l from-white to-transparent" />
       </motion.div>
     </>
   );

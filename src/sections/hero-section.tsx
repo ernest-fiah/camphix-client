@@ -15,7 +15,6 @@ export default function HeroSection() {
     const [charIndex, setCharIndex] = useState(0);
     const [deleting, setDeleting] = useState(false);
 
-
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setLoading(true);
@@ -34,7 +33,6 @@ export default function HeroSection() {
         "personal blog...",
         "startup website...",
     ];
-
 
     const prompts: Prompt[] = [
         {
@@ -75,7 +73,6 @@ export default function HeroSection() {
         },
     ];
 
-
     useEffect(() => {
         if (prompt) return;
 
@@ -102,23 +99,27 @@ export default function HeroSection() {
     const animatedPlaceholder = placeholders[textIndex].substring(0, charIndex);
 
     return (
-        <section id="home" className="flex flex-col items-center justify-center">
-            <div className="flex items-center gap-2 text-gray-500 mt-32">
-                <TrendingUpIcon className="size-4.5" />
+        <section id="home" className="flex flex-col items-center justify-center bg-black text-white">
+
+            <div className="flex items-center gap-2 text-gray-300 mt-32">
+                <TrendingUpIcon className="size-4.5 text-yellow-400" />
                 <span>Trusted by 2,000+ founders</span>
             </div>
 
-            <h1 className="text-center text-5xl/17 md:text-[64px]/20 font-semibold max-w-2xl m-2">
+            <h1 className="text-center text-5xl/17 md:text-[64px]/20 font-semibold max-w-2xl m-2 bg-linear-to-r from-white to-yellow-400 bg-clip-text text-transparent">
                 Build custom apps with AI
             </h1>
 
-            <p className="text-center text-base text-gray-500 max-w-md mt-2">
+            <p className="text-center text-base text-gray-300 max-w-md mt-2">
                 “No code. No design skills. Just describe your idea and launch instantly.”
             </p>
 
-            <form onSubmit={handleSubmit} className="focus-within:ring-2 focus-within:ring-gray-300 border border-gray-200 rounded-xl max-w-2xl w-full mt-8">
+            <form
+                onSubmit={handleSubmit}
+                className="focus-within:ring-2 focus-within:ring-red-600 border border-white/10 rounded-xl max-w-2xl w-full mt-8 bg-black/40"
+            >
                 <textarea
-                    className="w-full resize-none p-4 outline-none text-gray-600"
+                    className="w-full resize-none p-4 outline-none text-white bg-transparent"
                     placeholder={`Create a ${animatedPlaceholder}`}
                     rows={3}
                     minLength={10}
@@ -128,17 +129,24 @@ export default function HeroSection() {
                 />
 
                 <div className="flex items-center justify-between p-4 pt-0">
-                    <label htmlFor="file" className="border border-gray-200 text-gray-500 p-1.5 rounded-md cursor-pointer">
+                    <label
+                        htmlFor="file"
+                        className="border border-white/20 text-yellow-400 p-1.5 rounded-md cursor-pointer hover:border-red-500"
+                    >
                         <input type="file" id="file" hidden />
                         <UploadCloudIcon className="size-4.5" />
                     </label>
 
-                    <button className={`flex items-center bg-linear-to-b from-gray-600 to-gray-800 hover:from-gray-700 hover:to-gray-900 transition px-4 h-9 text-white rounded-lg ${loading ? "cursor-not-allowed opacity-80" : ""}`}>
+                    <button
+                        className={`flex items-center bg-linear-to-b from-red-600 to-yellow-500 hover:from-yellow-500 hover:to-red-600 transition px-4 h-9 text-white rounded-lg ${
+                            loading ? "cursor-not-allowed opacity-80" : ""
+                        }`}
+                    >
                         {loading ? (
-                            <Loader2Icon className="size-5 animate-spin" />
+                            <Loader2Icon className="size-5 animate-spin text-yellow-400" />
                         ) : (
                             <>
-                                <SparklesIcon className="size-4" />
+                                <SparklesIcon className="size-4 text-yellow-300" />
                                 <span className="ml-2">Create</span>
                             </>
                         )}
@@ -146,22 +154,27 @@ export default function HeroSection() {
                 </div>
             </form>
 
-            <Marquee gradient speed={30} pauseOnHover className="max-w-2xl w-full mt-3" >
+            <Marquee
+                gradient
+                speed={30}
+                pauseOnHover
+                className="max-w-2xl w-full mt-3 text-white"
+            >
                 {prompts.map((item) => {
                     const isSelected = selected === item.label;
 
                     return (
-                        <button key={item.label}
+                        <button
+                            key={item.label}
                             onClick={() => {
                                 setPrompt(item.prompt);
                                 setSelected(item.label);
                             }}
-                            className={`px-4 py-1.5 mx-2 border rounded-full transition
-                                ${isSelected
-                                    ? "bg-gray-200 text-gray-800 border-gray-300 cursor-not-allowed"
-                                    : "text-gray-500 bg-gray-50 border-gray-200 hover:bg-gray-100"
-                                }
-                            `}
+                            className={`px-4 py-1.5 mx-2 border rounded-full transition ${
+                                isSelected
+                                    ? "bg-yellow-500 text-black border-yellow-400 cursor-not-allowed"
+                                    : "text-white bg-black/40 border-white/20 hover:bg-red-600/20 hover:border-red-500"
+                            }`}
                         >
                             {item.label}
                         </button>

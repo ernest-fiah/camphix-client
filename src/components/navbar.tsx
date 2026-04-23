@@ -42,13 +42,13 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [worksOpen, setWorksOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-const [mobileWorksOpen, setMobileWorksOpen] = useState(false);
+  const [mobileWorksOpen, setMobileWorksOpen] = useState(false);
 
   const lastScrollY = useRef(0);
 
   // ✅ stability refs (ADDED ONLY)
   const servicesTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
-const worksTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const worksTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const navLinks: NavLink[] = [
     { name: "Home", href: "/" },
@@ -64,37 +64,37 @@ const worksTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
     {
       name: "Construction & Civil Engineering",
       icon: Building2,
-      href: "/services/construction",
+      href: "construction-&-civil-engineering",
     },
     {
       name: "Land Surveying & Consultancy",
       icon: MapPin,
-      href: "/services/surveying",
+      href: "/land-surveying-&-consultancy",
     },
     {
       name: "Architectural Design",
       icon: Home,
-      href: "/services/architecture",
+      href: "/architectural-design",
     },
     {
       name: "Real Estate Development",
       icon: Landmark,
-      href: "/services/real-estate",
+      href: "real-estate-development",
     },
     {
       name: "Project Management",
       icon: ClipboardList,
-      href: "/services/project-management",
+      href: "/project-management",
     },
     {
       name: "Building Materials Supply",
       icon: Truck,
-      href: "/services/materials",
+      href: "/building-materials-supply",
     },
     {
       name: "Electrical & Mechanical Works",
       icon: Zap,
-      href: "/services/electrical-mechanical",
+      href: "/electrical-mechanical",
     },
   ];
 
@@ -102,37 +102,37 @@ const worksTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
     {
       name: "Graphic Design & Branding",
       icon: Palette,
-      href: "/services/branding",
+      href: "/graphic-design-&-branding",
     },
     {
       name: "Videography & Media Production",
       icon: Video,
-      href: "/services/videography",
+      href: "/videography-media-production",
     },
     {
       name: "Digital Marketing",
       icon: Megaphone,
-      href: "/services/marketing",
+      href: "/digital-marketing",
     },
     {
       name: "Website & UI/UX Design",
       icon: Globe,
-      href: "/services/web-uiux",
+      href: "/web-uiux",
     },
     {
       name: "Printing & Production",
       icon: Printer,
-      href: "/services/printing",
+      href: "/printing-production",
     },
     {
       name: "Procurement & Logistics",
       icon: Package,
-      href: "/services/logistics",
+      href: "/procurement-logistics",
     },
     {
       name: "Strategic Consultancy",
       icon: Lightbulb,
-      href: "/services/consultancy",
+      href: "/strategic-consultancy",
     },
   ];
 
@@ -174,7 +174,8 @@ const worksTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
                     key={link.name}
                     className="relative"
                     onMouseEnter={() => {
-                      if (servicesTimeout.current) clearTimeout(servicesTimeout.current);
+                      if (servicesTimeout.current)
+                        clearTimeout(servicesTimeout.current);
                       setServicesOpen(true);
                     }}
                     onMouseLeave={() => {
@@ -197,7 +198,7 @@ const worksTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0.98 }}
                           transition={{ duration: 0.25 }}
-                          className="absolute left-5/2 -translate-x-1/2 shadow-xl top-7 w-[min(900px,95vw)] bg-white rounded-2xl border border-gray-200 p-6 z-[10000]"
+                          className="absolute left-5/2 -translate-x-1/2 shadow-xl top-10 w-[min(900px,95vw)] bg-white rounded-2xl border border-gray-200 p-6 z-[10000]"
                         >
                           <div className="grid grid-cols-3 gap-6">
                             {/* LEFT */}
@@ -237,15 +238,51 @@ const worksTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
                                   Contact Us
                                 </h3>
                               </div>
+                              <p className="text-sm text-gray-700 mb-6">
+                                {" "}
+                                From construction to design, we deliver complete
+                                solutions.{" "}
+                              </p>{" "}
+                              <p className="text-sm text-gray-700 mb-6">
+                                {" "}
+                                Quality materials, expert services, and reliable
+                                execution.{" "}
+                              </p>{" "}
+                              <p className="text-sm text-gray-700 mb-6">
+                                {" "}
+                                Let’s bring your project to life.{" "}
+                              </p>
+                              <div className="flex justify-center">
+                                <a
+                                  href="tel:0541728294"
+                                  className="relative group overflow-hidden inline-flex items-center gap-2 px-6 py-3 text-white rounded-lg bg-linear-to-b from-red-500 to-red-700 shadow-lg"
+                                >
+                                  {/* BUTTON GLOW */}
+                                  <span className="absolute inset-0 bg-gradient-to-r from-yellow-400/0 via-white/15 to-red-500/0 translate-x-[-120%] group-hover:translate-x-[120%] transition-transform duration-700"></span>
 
-                              <p className="text-sm text-gray-700 mb-6"> From construction to design, we deliver complete solutions. </p> <p className="text-sm text-gray-700 mb-6"> Quality materials, expert services, and reliable execution. </p> <p className="text-sm text-gray-700 mb-6"> Let’s bring your project to life. </p>
+                                  {/* TEXT WRAP */}
+                                  <span className="relative overflow-hidden h-6 flex items-center font-medium">
+                                    {/* TOP TEXT */}
+                                    <span className="block transition-all duration-300 ease-out group-hover:-translate-y-full group-hover:opacity-0 w-30">
+                                      Book A Call
+                                    </span>
 
-                              <Link
-                                to="/contact"
-                                className="mt-4 bg-red-400 hover:bg-red-500 text-black px-4 py-4 rounded-full flex items-center justify-center gap-2"
-                              >
-                                BOOK A CALL <ArrowRight size={16} />
-                              </Link>
+                                    {/* BOTTOM TEXT */}
+                                    <span className="absolute left-0 top-0 translate-y-full opacity-0 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100">
+                                      Book A Call
+                                    </span>
+
+                                    {/* UNDERLINE */}
+                                    <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+                                  </span>
+
+                                  {/* ICON */}
+                                  <ArrowRight className="relative w-4 h-4 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:rotate-12" />
+
+                                  {/* BORDER GLOW */}
+                                  <span className="absolute inset-0 rounded-lg border border-white/10 group-hover:border-yellow-400/70 transition-all duration-300"></span>
+                                </a>
+                              </div>
                             </div>
                           </div>
                         </motion.div>
@@ -261,7 +298,8 @@ const worksTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
                     key={link.name}
                     className="relative"
                     onMouseEnter={() => {
-                      if (worksTimeout.current) clearTimeout(worksTimeout.current);
+                      if (worksTimeout.current)
+                        clearTimeout(worksTimeout.current);
                       setWorksOpen(true);
                     }}
                     onMouseLeave={() => {
@@ -284,7 +322,7 @@ const worksTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0.98 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-7 left-0 bg-white border border-gray-200 rounded-lg shadow-md p-2 min-w-[180px] z-[10000]"
+                          className="absolute top-10 left-0 bg-white border border-gray-200 rounded-lg shadow-md p-2 min-w-[275px] z-[10000]"
                         >
                           <Link
                             to="/Portfolio"
@@ -293,6 +331,26 @@ const worksTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
                             <Briefcase className="w-4 h-4 text-red-500" />
                             <span className="text-sm text-gray-700">
                               Portfolio
+                            </span>
+                          </Link>
+
+                          <Link
+                            to="/graphic-design-portfolio"
+                            className="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-md"
+                          >
+                            <Palette className="w-4 h-4 text-red-500" />
+                            <span className="text-sm text-gray-700">
+                              Graphic Design Portfolio
+                            </span>
+                          </Link>
+
+                          <Link
+                            to="/building-construction-portfolio"
+                            className="flex items-center gap-3 px-3 py-2 hover:bg-gray-100 rounded-md"
+                          >
+                            <Building2 className="w-4 h-4 text-red-500" />
+                            <span className="text-sm text-gray-700">
+                              Building & Construction Portfolio
                             </span>
                           </Link>
                         </motion.div>
@@ -315,16 +373,36 @@ const worksTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
           </div>
 
           {/* RIGHT */}
-          <div className="hidden md:flex items-center gap-2">
-            <Link to="/login" className="px-6 py-2.5 hover:bg-gray-100 rounded-lg">
-              Login
-            </Link>
-            <Link
-              to="/"
-              className="bg-linear-to-b from-gray-600 to-gray-800 px-5 py-2 text-white rounded-lg"
+          <div className="hidden md:flex items-center gap-2 ml-18 mr-5">
+            <a
+              href="tel:0541728294"
+              className="relative group overflow-hidden inline-flex items-center gap-2 px-5 py-2 text-white rounded-lg bg-linear-to-b from-gray-600 to-gray-800"
             >
-              Start a project
-            </Link>
+              {/* BUTTON GLOW */}
+              <span className="absolute inset-0 bg-gradient-to-r from-yellow-400/0 via-white/10 to-red-500/0 translate-x-[-120%] group-hover:translate-x-[120%] transition-transform duration-700"></span>
+
+              {/* TEXT WRAP */}
+              <span className="relative overflow-hidden h-6 flex items-center">
+                {/* TOP TEXT */}
+                <span className="block transition-all duration-300 ease-out group-hover:-translate-y-full group-hover:opacity-0">
+                  Book A Call
+                </span>
+
+                {/* BOTTOM TEXT */}
+                <span className="absolute left-0 top-0 translate-y-full opacity-0 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100">
+                  Book A Call
+                </span>
+
+                {/* UNDERLINE */}
+                <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+              </span>
+
+              {/* ICON */}
+              <ArrowRight className="relative w-4 h-4 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:rotate-12" />
+
+              {/* BORDER GLOW */}
+              <span className="absolute inset-0 rounded-lg border border-white/10 group-hover:border-yellow-400/70 transition-all duration-300"></span>
+            </a>
           </div>
 
           {/* MOBILE */}
@@ -335,189 +413,191 @@ const worksTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
       </nav>
 
       {/* ================= MOBILE MENU (FULL BEDIMCODE ANIMATION POLISH) ================= */}
-<AnimatePresence>
-  {isOpen && (
-    <>
-      {/* BACKDROP */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="fixed inset-0 bg-black/60 z-[9999]"
-        onClick={() => setIsOpen(false)}
-      />
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            {/* BACKDROP */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/60 z-[9999]"
+              onClick={() => setIsOpen(false)}
+            />
 
-      {/* PANEL */}
-      <motion.div
-        initial={{ x: "100%" }}
-        animate={{ x: 0 }}
-        exit={{ x: "100%" }}
-        transition={{ duration: 0.45, ease: "easeInOut" }}
-        className="fixed top-0 right-0 h-full w-[80%] bg-white z-[10000] flex flex-col px-6 py-10 overflow-y-auto"
-      >
-        {/* CLOSE */}
-        <motion.button
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ delay: 0.2 }}
-          onClick={() => setIsOpen(false)}
-          className="self-end mb-6"
-        >
-          <XIcon className="w-6 h-6" />
-        </motion.button>
-
-        {/* ================= MENU ================= */}
-        <div className="flex flex-col gap-6 text-gray-700 text-lg">
-
-          {/* HOME */}
-          <motion.div
-            initial={{ x: 40, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.05 }}
-          >
-            <Link onClick={() => setIsOpen(false)} to="/" className="flex items-center gap-3">
-              <Home className="w-4 h-4 text-red-500" />
-              Home
-            </Link>
-          </motion.div>
-
-          {/* ================= SERVICES ================= */}
-          <motion.div
-            initial={{ x: 40, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.1 }}
-          >
-            <button
-              onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-              className="flex items-center justify-between w-full font-medium"
+            {/* PANEL */}
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ duration: 0.45, ease: "easeInOut" }}
+              className="fixed top-0 right-0 h-full w-[80%] bg-white z-[10000] flex flex-col px-6 py-10 overflow-y-auto"
             >
-              <span className="flex items-center gap-3">
-                <Building2 className="w-4 h-4 text-red-500" />
-                Services
-              </span>
-
-              <ChevronDown
-                className={`w-4 h-4 transition-transform duration-300 ${
-                  mobileServicesOpen ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-          </motion.div>
-
-          <AnimatePresence>
-            {mobileServicesOpen && (
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.35 }}
-                className="flex flex-col pl-6 gap-1 overflow-hidden"
+              {/* CLOSE */}
+              <motion.button
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.2 }}
+                onClick={() => setIsOpen(false)}
+                className="self-end mb-6"
               >
-                {servicesLeft.concat(servicesRight).map((item, i) => (
+                <XIcon className="w-6 h-6" />
+              </motion.button>
+
+              {/* ================= MENU ================= */}
+              <div className="flex flex-col gap-6 text-gray-700 text-lg">
+                {/* HOME */}
+                <motion.div
+                  initial={{ x: 40, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 0.05 }}
+                >
+                  <Link
+                    onClick={() => setIsOpen(false)}
+                    to="/"
+                    className="flex items-center gap-3"
+                  >
+                    <Home className="w-4 h-4 text-red-500" />
+                    Home
+                  </Link>
+                </motion.div>
+
+                {/* ================= SERVICES ================= */}
+                <motion.div
+                  initial={{ x: 40, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 0.1 }}
+                >
+                  <button
+                    onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                    className="flex items-center justify-between w-full font-medium"
+                  >
+                    <span className="flex items-center gap-3">
+                      <Building2 className="w-4 h-4 text-red-500" />
+                      Services
+                    </span>
+
+                    <ChevronDown
+                      className={`w-4 h-4 transition-transform duration-300 ${
+                        mobileServicesOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                </motion.div>
+
+                <AnimatePresence>
+                  {mobileServicesOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.35 }}
+                      className="flex flex-col pl-6 gap-1 overflow-hidden"
+                    >
+                      {servicesLeft.concat(servicesRight).map((item, i) => (
+                        <motion.div
+                          key={i}
+                          initial={{ x: 30, opacity: 0 }}
+                          animate={{ x: 0, opacity: 1 }}
+                          transition={{ delay: i * 0.03 }}
+                        >
+                          <Link
+                            to={item.href}
+                            onClick={() => setIsOpen(false)}
+                            className="flex items-center gap-3 py-2 px-2 rounded-md hover:bg-gray-100 text-sm"
+                          >
+                            <motion.span
+                              initial={{ scale: 0 }}
+                              animate={{ scale: 1 }}
+                              transition={{ delay: i * 0.03 }}
+                            >
+                              <item.icon className="w-4 h-4 text-red-500" />
+                            </motion.span>
+
+                            <span>{item.name}</span>
+                          </Link>
+                        </motion.div>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                {/* ================= OUR WORKS ================= */}
+                <motion.div
+                  initial={{ x: 40, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 0.15 }}
+                >
+                  <button
+                    onClick={() => setMobileWorksOpen(!mobileWorksOpen)}
+                    className="flex items-center justify-between w-full font-medium"
+                  >
+                    <span className="flex items-center gap-3">
+                      <Briefcase className="w-4 h-4 text-red-500" />
+                      Our Works
+                    </span>
+
+                    <ChevronDown
+                      className={`w-4 h-4 transition-transform duration-300 ${
+                        mobileWorksOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                </motion.div>
+
+                <AnimatePresence>
+                  {mobileWorksOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.35 }}
+                      className="flex flex-col pl-6 gap-1 overflow-hidden"
+                    >
+                      <motion.div
+                        initial={{ x: 30, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                      >
+                        <Link
+                          to="/Portfolio"
+                          onClick={() => setIsOpen(false)}
+                          className="flex items-center gap-3 py-2 px-2 rounded-md hover:bg-gray-100 text-sm"
+                        >
+                          <Briefcase className="w-4 h-4 text-red-500" />
+                          Portfolio
+                        </Link>
+                      </motion.div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                {/* ================= OTHER LINKS ================= */}
+                {[
+                  { name: "Projects", icon: ClipboardList, to: "/projects" },
+                  { name: "About", icon: Lightbulb, to: "/about" },
+                  { name: "Contact", icon: MapPin, to: "/contact" },
+                ].map((item, i) => (
                   <motion.div
-                    key={i}
-                    initial={{ x: 30, opacity: 0 }}
+                    key={item.name}
+                    initial={{ x: 40, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: i * 0.03 }}
+                    transition={{ delay: 0.2 + i * 0.05 }}
                   >
                     <Link
-                      to={item.href}
                       onClick={() => setIsOpen(false)}
-                      className="flex items-center gap-3 py-2 px-2 rounded-md hover:bg-gray-100 text-sm"
+                      to={item.to}
+                      className="flex items-center gap-3"
                     >
-                      <motion.span
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        transition={{ delay: i * 0.03 }}
-                      >
-                        <item.icon className="w-4 h-4 text-red-500" />
-                      </motion.span>
-
-                      <span>{item.name}</span>
+                      <item.icon className="w-4 h-4 text-red-500" />
+                      {item.name}
                     </Link>
                   </motion.div>
                 ))}
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          {/* ================= OUR WORKS ================= */}
-          <motion.div
-            initial={{ x: 40, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.15 }}
-          >
-            <button
-              onClick={() => setMobileWorksOpen(!mobileWorksOpen)}
-              className="flex items-center justify-between w-full font-medium"
-            >
-              <span className="flex items-center gap-3">
-                <Briefcase className="w-4 h-4 text-red-500" />
-                Our Works
-              </span>
-
-              <ChevronDown
-                className={`w-4 h-4 transition-transform duration-300 ${
-                  mobileWorksOpen ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-          </motion.div>
-
-          <AnimatePresence>
-            {mobileWorksOpen && (
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.35 }}
-                className="flex flex-col pl-6 gap-1 overflow-hidden"
-              >
-                <motion.div
-                  initial={{ x: 30, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                >
-                  <Link
-                    to="/Portfolio"
-                    onClick={() => setIsOpen(false)}
-                    className="flex items-center gap-3 py-2 px-2 rounded-md hover:bg-gray-100 text-sm"
-                  >
-                    <Briefcase className="w-4 h-4 text-red-500" />
-                    Portfolio
-                  </Link>
-                </motion.div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          {/* ================= OTHER LINKS ================= */}
-          {[
-            { name: "Projects", icon: ClipboardList, to: "/projects" },
-            { name: "About", icon: Lightbulb, to: "/about" },
-            { name: "Contact", icon: MapPin, to: "/contact" },
-          ].map((item, i) => (
-            <motion.div
-              key={item.name}
-              initial={{ x: 40, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.2 + i * 0.05 }}
-            >
-              <Link
-                onClick={() => setIsOpen(false)}
-                to={item.to}
-                className="flex items-center gap-3"
-              >
-                <item.icon className="w-4 h-4 text-red-500" />
-                {item.name}
-              </Link>
+              </div>
             </motion.div>
-          ))}
-
-        </div>
-      </motion.div>
-    </>
-  )}
-</AnimatePresence>
+          </>
+        )}
+      </AnimatePresence>
 
       <div className="h-18" />
     </>

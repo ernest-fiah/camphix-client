@@ -5,19 +5,19 @@ const testimonials = [
     text: "Camphix Enterprise delivered outstanding results—our project execution became faster and more efficient.",
     name: "Kwame Mensah",
     role: "Project Director, BuildCore",
-    img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200",
+    img: "public/assets/testimonial/1.jpg",
   },
   {
     text: "We were able to launch our construction platform ahead of schedule thanks to this team.",
     name: "Ama Owusu",
     role: "Product Lead",
-    img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200",
+    img: "public/assets/testimonial/2.jpg",
   },
   {
     text: "Professional service, clear communication, and excellent delivery from start to finish.",
     name: "Kojo Attah",
     role: "CEO, StructBuild",
-    img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200",
+    img: "public/assets/testimonial/3.jpg",
   },
   {
     text: "Our engineering workflow improved dramatically after adopting their solutions.",
@@ -27,9 +27,9 @@ const testimonials = [
   },
   {
     text: "Reliable execution and smooth collaboration throughout the entire project lifecycle.",
-    name: "Yaw Kusi",
-    role: "Operations Manager, DevWorks",
-    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100",
+    name: "Macheal Essuman_CEO. of Micky Build Company Limited",
+    role: "CEO. of Micky Build Company Limited",
+    img: "public/assets/testimonial/4.png",
   },
   {
     text: "The quality of delivery and attention to detail exceeded our expectations.",

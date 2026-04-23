@@ -14,7 +14,7 @@ export default function Hero() {
           className="text-center mb-12"
         >
           <span className="text-xs text-red-600 bg-white rounded-full px-6 py-2">
-            CAMPhix Enterprise
+            Camphix Enterprise
           </span>
 
           <h1 className="text-4xl md:text-5xl font-semibold text-zinc-900 mt-6">
@@ -40,8 +40,8 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="md:w-[60%] bg-white rounded-xl p-6 flex flex-col md:flex-row gap-5 hover:shadow-md transition"
             >
-              <img
-                src="https://assets.prebuiltui.com/images/components/feature-sections/feature-workspace-img.png"
+             <img
+                src="public/assets/hero-2.jpg"
                 alt="Construction"
                 className="w-full h-48 md:h-full md:w-[45%] object-cover rounded-xl"
               />
@@ -101,7 +101,7 @@ export default function Hero() {
               className="md:w-[60%] bg-white rounded-xl p-6 flex flex-col md:flex-row gap-5 hover:shadow-md transition"
             >
               <img
-                src="https://assets.prebuiltui.com/images/components/feature-sections/feature-minimal-office-img.png"
+                src="public/assets/hero-1.jpg"
                 alt="Digital services"
                 className="w-full h-48 md:h-full md:w-[45%] object-cover rounded-xl"
               />
