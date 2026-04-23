@@ -162,7 +162,7 @@ export default function Navbar() {
       >
         <div className="flex items-center justify-between px-4 py-4 md:px-16 lg:px-24 xl:px-32 border-b border-gray-200">
           <a href="#">
-            <img src="/assets/camphix.png" className="h-12 w-auto md:mr-31" />
+            <img src="/assets/camphix.png" className="h-8 w-auto md:mr-31" />
           </a>
 
           {/* NAV LINKS */}
