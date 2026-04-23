@@ -11,7 +11,6 @@ import {
   Building2,
   Ruler,
   Wrench,
-  Paintbrush,
   FolderKanban,
   Layers3,
   Star,
