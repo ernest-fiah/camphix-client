@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/home";
@@ -27,42 +28,51 @@ import ProcurementLogistics from "./pages/procurement-logistics";
 import StrategicConsultancy from "./pages/strategic-consultancy";
 import BlogPage from "./pages/Blog";
 
+import SplashScreen from "./components/SplashScreen";
+
 export default function App() {
+    const [loading, setLoading] = useState(true);
+
     return (
         <>
-            <Navbar />
-            <MobileNavbar />
+            {/* ✅ SPLASH SCREEN */}
+            {loading && <SplashScreen onDone={() => setLoading(false)} />}
 
-            <ScrollToTop />
+            {/* ✅ MAIN APP (hidden until splash ends) */}
+            {!loading && (
+                <>
+                    <Navbar />
+                    <MobileNavbar />
+                    <ScrollToTop />
 
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path="/OurWorks" element={<OurWorks />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/construction-&-civil-engineering" element={<ConstructionCivilEngineering/>} />
-                <Route path="/land-surveying-&-consultancy" element={<LandSurveyingConsultancy/>} />
-                <Route path="/architectural-design" element={<ArchitecturalDesign />} />
-                <Route path="/real-estate-development" element={<RealEstateDevelopment />} />
-                <Route path="/project-management" element={<ProjectManagement />} />
-                <Route path="/building-materials-supply" element={<BuildingMaterialsSupply />} />
-                <Route path="/electrical-mechanical" element={<ElectricalMechanicalWorks />} />
-                <Route path="/graphic-design-&-branding" element={<GraphicDesignBranding />} />
-                <Route path="/videography-media-production" element={<ProjectManagement />} />
-                <Route path="/digital-marketing" element={<DigitalMarketing />} />
-                <Route path="/web-uiux" element={<WebsiteUIUXDesign />} />
-                <Route path="/printing-production" element={<PrintingProduction />} />
-                <Route path="/procurement-logistics" element={<ProcurementLogistics />} />
-                <Route path="/strategic-consultancy" element={<StrategicConsultancy />} />
-                <Route path="/blog" element={<BlogPage />} />
-                
-                
-            </Routes>
+                    <Routes>
+                        <Route path='/' element={<Home />} />
+                        <Route path="/OurWorks" element={<OurWorks />} />
+                        <Route path="/services" element={<Services />} />
+                        <Route path="/projects" element={<Projects />} />
+                        <Route path="/portfolio" element={<Portfolio />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/construction-&-civil-engineering" element={<ConstructionCivilEngineering/>} />
+                        <Route path="/land-surveying-&-consultancy" element={<LandSurveyingConsultancy/>} />
+                        <Route path="/architectural-design" element={<ArchitecturalDesign />} />
+                        <Route path="/real-estate-development" element={<RealEstateDevelopment />} />
+                        <Route path="/project-management" element={<ProjectManagement />} />
+                        <Route path="/building-materials-supply" element={<BuildingMaterialsSupply />} />
+                        <Route path="/electrical-mechanical" element={<ElectricalMechanicalWorks />} />
+                        <Route path="/graphic-design-&-branding" element={<GraphicDesignBranding />} />
+                        <Route path="/videography-media-production" element={<ProjectManagement />} />
+                        <Route path="/digital-marketing" element={<DigitalMarketing />} />
+                        <Route path="/web-uiux" element={<WebsiteUIUXDesign />} />
+                        <Route path="/printing-production" element={<PrintingProduction />} />
+                        <Route path="/procurement-logistics" element={<ProcurementLogistics />} />
+                        <Route path="/strategic-consultancy" element={<StrategicConsultancy />} />
+                        <Route path="/blog" element={<BlogPage />} />
+                    </Routes>
 
-            <Footer />
+                    <Footer />
+                </>
+            )}
         </>
     );
 }

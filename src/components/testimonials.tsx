@@ -9,21 +9,21 @@ const testimonials = [
   },
   {
     text: "We were able to launch our construction platform ahead of schedule thanks to this team.",
-    name: "Ama Owusu",
+    name: "Peter ThankGod",
     role: "Product Lead",
-    img: "/assets/testimonial/2.webp",
+    img: "/assets/testimonial/7.webp",
   },
   {
     text: "Professional service, clear communication, and excellent delivery from start to finish.",
-    name: "Kojo Attah",
+    name: "Clement",
     role: "CEO, StructBuild",
-    img: "/assets/testimonial/3.webp",
+    img: "/assets/testimonial/8.webp",
   },
   {
     text: "Our engineering workflow improved dramatically after adopting their solutions.",
-    name: "Abena Boateng",
+    name: "Edith",
     role: "Engineering Lead",
-    img: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=200",
+    img: "/assets/testimonial/6.webp",
   },
   {
     text: "Reliable execution and smooth collaboration throughout the entire project lifecycle.",
