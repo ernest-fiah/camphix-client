@@ -41,7 +41,7 @@ export default function Hero() {
               className="md:w-[60%] bg-white rounded-xl p-6 flex flex-col md:flex-row gap-5 hover:shadow-md transition"
             >
              <img
-                src="public/assets/hero-2.jpg"
+                src="/assets/hero-2.webp"
                 alt="Construction"
                 className="w-full h-48 md:h-full md:w-[45%] object-cover rounded-xl"
               />
@@ -101,7 +101,7 @@ export default function Hero() {
               className="md:w-[60%] bg-white rounded-xl p-6 flex flex-col md:flex-row gap-5 hover:shadow-md transition"
             >
               <img
-                src="public/assets/hero-1.jpg"
+                src="/assets/hero-1.webp"
                 alt="Digital services"
                 className="w-full h-48 md:h-full md:w-[45%] object-cover rounded-xl"
               />

@@ -2,16 +2,16 @@ import { motion } from "framer-motion";
 
 const CompanyLogos = () => {
   const companyLogos = [
-    "public/assets/trustedBrands/1.png",
-    "public/assets/trustedBrands/2.png",
-    "public/assets/trustedBrands/3.png",
-    "public/assets/trustedBrands/4.png",
-    "public/assets/trustedBrands/5.png",
-    "public/assets/trustedBrands/7.png",
-    "public/assets/trustedBrands/8.png",
-    "public/assets/trustedBrands/9.png",
-    "public/assets/trustedBrands/10.png",
-  ];
+  "/assets/trustedBrands/1.webp",
+  "/assets/trustedBrands/2.webp",
+  "/assets/trustedBrands/3.webp",
+  "/assets/trustedBrands/4.webp",
+  "/assets/trustedBrands/5.webp",
+  
+  "/assets/trustedBrands/8.webp",
+  "/assets/trustedBrands/9.webp",
+  "/assets/trustedBrands/10.webp",
+];
 
   return (
     <>

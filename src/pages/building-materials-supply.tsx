@@ -13,57 +13,57 @@ export default function BuildingMaterialsSupply() {
   const categories = ["Building Materials Supply"];
 
   const galleryItems = [
-    {
-      title: "Building Materials Supply",
-      image: "public/assets/building-materials-supply/1.jpg",
-      bg: "bg-[#2a2540]",
-    },
-    {
-      title: "Building Materials Supply",
-      image: "public/assets/building-materials-supply/2.jpg",
-      bg: "bg-[#00323f]",
-    },
-    {
-      title: "Building Materials Supply",
-      image: "public/assets/building-materials-supply/3.jpg",
-      bg: "bg-[#00365c]",
-    },
-    {
-      title: "Building Materials Supply",
-      image: "public/assets/building-materials-supply/4.jpg",
-      bg: "bg-[#374151]",
-    },
-    {
-      title: "Building Materials Supply",
-      image: "public/assets/building-materials-supply/5.jpg",
-      bg: "bg-[#5b4636]",
-    },
-    {
-      title: "Building Materials Supply",
-      image: "public/assets/building-materials-supply/6.jpg",
-      bg: "bg-[#2a2540]",
-    },
-    {
-      title: "Building Materials Supply",
-      image: "public/assets/building-materials-supply/7.jpg",
-      bg: "bg-[#00323f]",
-    },
-    {
-      title: "Building Materials Supply",
-      image: "public/assets/building-materials-supply/8.jpg",
-      bg: "bg-[#00365c]",
-    },
-    {
-      title: "Building Materials Supply",
-      image: "public/assets/building-materials-supply/9.jpg",
-      bg: "bg-[#374151]",
-    },
-    {
-      title: "Building Materials Supply",
-      image: "public/assets/building-materials-supply/10.jpg",
-      bg: "bg-[#5b4636]",
-    },
-  ];
+  {
+    title: "Building Materials Supply",
+    image: "assets/building-materials-supply/1.webp",
+    bg: "bg-[#2a2540]",
+  },
+  {
+    title: "Building Materials Supply",
+    image: "assets/building-materials-supply/2.webp",
+    bg: "bg-[#00323f]",
+  },
+  {
+    title: "Building Materials Supply",
+    image: "assets/building-materials-supply/3.webp",
+    bg: "bg-[#00365c]",
+  },
+  {
+    title: "Building Materials Supply",
+    image: "assets/building-materials-supply/4.webp",
+    bg: "bg-[#374151]",
+  },
+  {
+    title: "Building Materials Supply",
+    image: "assets/building-materials-supply/5.webp",
+    bg: "bg-[#5b4636]",
+  },
+  {
+    title: "Building Materials Supply",
+    image: "assets/building-materials-supply/6.webp",
+    bg: "bg-[#2a2540]",
+  },
+  {
+    title: "Building Materials Supply",
+    image: "assets/building-materials-supply/7.webp",
+    bg: "bg-[#00323f]",
+  },
+  {
+    title: "Building Materials Supply",
+    image: "assets/building-materials-supply/8.webp",
+    bg: "bg-[#00365c]",
+  },
+  {
+    title: "Building Materials Supply",
+    image: "assets/building-materials-supply/9.webp",
+    bg: "bg-[#374151]",
+  },
+  {
+    title: "Building Materials Supply",
+    image: "assets/building-materials-supply/10.webp",
+    bg: "bg-[#5b4636]",
+  },
+];
 
   const [activeCategory, setActiveCategory] =
     useState("Building Materials Supply");
@@ -171,7 +171,7 @@ export default function BuildingMaterialsSupply() {
             {/* Main Card */}
             <div className="relative z-10 bg-[#374151] rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-5 shadow-2xl w-full max-w-xl mx-auto">
               <img
-                src="public/assets/building-materials-supply/1.jpg"
+                src="/assets/building-materials-supply/1.webp"
                 alt="Building Materials Supply"
                 className="rounded-xl sm:rounded-2xl w-full h-[220px] sm:h-[320px] md:h-[380px] object-cover"
               />

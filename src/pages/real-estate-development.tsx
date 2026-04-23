@@ -8,58 +8,58 @@ export default function RealEstateDevelopment() {
   =========================== */
   const categories = ["Real Estate Development"];
 
-  const galleryItems = [
-    {
-      title: "Real Estate Development",
-      image: "public/assets/real-estate-development/1.jpg",
-      bg: "bg-[#2a2540]",
-    },
-    {
-      title: "Real Estate Development",
-      image: "public/assets/real-estate-development/2.jpg",
-      bg: "bg-[#00323f]",
-    },
-    {
-      title: "Real Estate Development",
-      image: "public/assets/real-estate-development/3.jpg",
-      bg: "bg-[#00365c]",
-    },
-    {
-      title: "Real Estate Development",
-      image: "public/assets/real-estate-development/4.jpg",
-      bg: "bg-[#374151]",
-    },
-    {
-      title: "Real Estate Development",
-      image: "public/assets/real-estate-development/5.jpg",
-      bg: "bg-[#5b4636]",
-    },
-    {
-      title: "Real Estate Development",
-      image: "public/assets/real-estate-development/6.jpg",
-      bg: "bg-[#2a2540]",
-    },
-    {
-      title: "Real Estate Development",
-      image: "public/assets/real-estate-development/7.jpg",
-      bg: "bg-[#00323f]",
-    },
-    {
-      title: "Real Estate Development",
-      image: "public/assets/real-estate-development/8.jpg",
-      bg: "bg-[#00365c]",
-    },
-    {
-      title: "Real Estate Development",
-      image: "public/assets/real-estate-development/9.jpg",
-      bg: "bg-[#374151]",
-    },
-    {
-      title: "Real Estate Development",
-      image: "public/assets/real-estate-development/10.jpg",
-      bg: "bg-[#5b4636]",
-    },
-  ];
+const galleryItems = [
+  {
+    title: "Real Estate Development",
+    image: "/assets/real-estate-development/1.webp",
+    bg: "bg-[#2a2540]",
+  },
+  {
+    title: "Real Estate Development",
+    image: "/assets/real-estate-development/2.webp",
+    bg: "bg-[#00323f]",
+  },
+  {
+    title: "Real Estate Development",
+    image: "/assets/real-estate-development/3.webp",
+    bg: "bg-[#00365c]",
+  },
+  {
+    title: "Real Estate Development",
+    image: "/assets/real-estate-development/4.webp",
+    bg: "bg-[#374151]",
+  },
+  {
+    title: "Real Estate Development",
+    image: "/assets/real-estate-development/5.webp",
+    bg: "bg-[#5b4636]",
+  },
+  {
+    title: "Real Estate Development",
+    image: "/assets/real-estate-development/6.webp",
+    bg: "bg-[#2a2540]",
+  },
+  {
+    title: "Real Estate Development",
+    image: "/assets/real-estate-development/7.webp",
+    bg: "bg-[#00323f]",
+  },
+  {
+    title: "Real Estate Development",
+    image: "/assets/real-estate-development/8.webp",
+    bg: "bg-[#00365c]",
+  },
+  {
+    title: "Real Estate Development",
+    image: "/assets/real-estate-development/9.webp",
+    bg: "bg-[#374151]",
+  },
+  {
+    title: "Real Estate Development",
+    image: "/assets/real-estate-development/1.webp",
+    bg: "bg-[#5b4636]",
+  },
+];
 
   const [activeCategory, setActiveCategory] = useState(
     "Real Estate Development"
@@ -174,7 +174,7 @@ export default function RealEstateDevelopment() {
             {/* Main Card */}
             <div className="relative z-10 bg-[#374151] rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-5 shadow-2xl w-full max-w-xl mx-auto">
               <img
-                src="public/assets/real-estate-development/1.jpg"
+                src="/assets/real-estate-development/3.webp"
                 alt="Real Estate Development"
                 className="rounded-xl sm:rounded-2xl w-full h-[220px] sm:h-[320px] md:h-[380px] object-cover"
               />

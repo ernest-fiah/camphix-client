@@ -12,34 +12,34 @@ export default function OurWorks() {
     // =========================
     // CONSTRUCTION PROJECTS
     // =========================
-    { img: "public/assets/construction/8.jpg", category: "Construction" },
-    { img: "public/assets/construction/9.jpg", category: "Construction" },
-    { img: "public/assets/construction/10.jpg", category: "Construction" },
-    { img: "public/assets/construction/11.jpg", category: "Construction" },
-    { img: "public/assets/construction/12.jpg", category: "Construction" },
-    { img: "public/assets/construction/13.jpg", category: "Construction" },
-    { img: "public/assets/construction/14.jpg", category: "Construction" },
-    { img: "public/assets/construction/15.jpg", category: "Construction" },
-    { img: "public/assets/construction/16.jpg", category: "Construction" },
-    { img: "public/assets/construction/17.jpg", category: "Construction" },
-    { img: "public/assets/construction/18.jpg", category: "Construction" },
-    { img: "public/assets/construction/19.jpg", category: "Construction" },
-    { img: "public/assets/construction/2.jpg", category: "Construction" },
+    { img: "/assets/construction/8.webp", category: "Construction" },
+    { img: "/assets/construction/9.webp", category: "Construction" },
+    { img: "/assets/construction/10.webp", category: "Construction" },
+    { img: "/assets/construction/11.webp", category: "Construction" },
+    { img: "/assets/construction/12.webp", category: "Construction" },
+    { img: "/assets/construction/13.webp", category: "Construction" },
+    { img: "/assets/construction/14.webp", category: "Construction" },
+    { img: "/assets/construction/15.webp", category: "Construction" },
+    { img: "/assets/construction/16.webp", category: "Construction" },
+    { img: "/assets/construction/17.webp", category: "Construction" },
+    { img: "/assets/construction/18.webp", category: "Construction" },
+    { img: "/assets/construction/19.webp", category: "Construction" },
+    { img: "/assets/construction/2.webp", category: "Construction" },
 
     // =========================
     // FLYER DESIGNS
     // =========================
-    { img: "/assets/camphix-flyers/1.jpg", category: "Flyers" },
-    { img: "/assets/camphix-flyers/2.jpg", category: "Flyers" },
-    { img: "/assets/camphix-flyers/3.jpg", category: "Flyers" },
-    { img: "/assets/camphix-flyers/4.jpg", category: "Flyers" },
-    { img: "/assets/camphix-flyers/5.jpg", category: "Flyers" },
-    { img: "/assets/camphix-flyers/6.jpg", category: "Flyers" },
-    { img: "/assets/camphix-flyers/7.jpg", category: "Flyers" },
-    { img: "/assets/camphix-flyers/8.jpg", category: "Flyers" },
-    { img: "/assets/camphix-flyers/9.jpg", category: "Flyers" },
-    { img: "/assets/camphix-flyers/10.jpg", category: "Flyers" },
-    { img: "/assets/camphix-flyers/11.jpg", category: "Flyers" },
+    { img: "/assets/camphix-flyers/1.webp", category: "Flyers" },
+    { img: "/assets/camphix-flyers/2.webp", category: "Flyers" },
+    { img: "/assets/camphix-flyers/3.webp", category: "Flyers" },
+    { img: "/assets/camphix-flyers/4.webp", category: "Flyers" },
+    { img: "/assets/camphix-flyers/5.webp", category: "Flyers" },
+    { img: "/assets/camphix-flyers/6.webp", category: "Flyers" },
+    { img: "/assets/camphix-flyers/7.webp", category: "Flyers" },
+    { img: "/assets/camphix-flyers/8.webp", category: "Flyers" },
+    { img: "/assets/camphix-flyers/9.webp", category: "Flyers" },
+    { img: "/assets/camphix-flyers/10.webp", category: "Flyers" },
+    { img: "/assets/camphix-flyers/11.webp", category: "Flyers" },
   ];
 
   // =========================
@@ -90,7 +90,7 @@ export default function OurWorks() {
   return (
     <div
       ref={sectionRef}
-      className="w-full py-20 px-4 md:px-10 lg:px-20 bg-white"
+      className="w-full py-16 sm:py-20 px-4 md:px-10 lg:px-20 bg-white overflow-x-hidden"
     >
       {/* =========================
           STYLE (MASONRY LAYOUT)
@@ -131,7 +131,7 @@ export default function OurWorks() {
 
         .item img {
           width: 100%;
-          height: auto; /* IMPORTANT: keeps original image ratio */
+          height: auto;
           display: block;
           transition: transform 0.5s ease;
         }
@@ -161,7 +161,7 @@ export default function OurWorks() {
       {/* =========================
           FILTER BUTTONS
       ========================= */}
-      <div className="flex flex-wrap justify-center gap-3 mt-10">
+      <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mt-10 px-2">
         {categories.map((cat) => (
           <button
             key={cat}
@@ -191,6 +191,7 @@ export default function OurWorks() {
               src={item.img}
               alt={`work-${i}`}
               loading="lazy"
+              className="w-full h-auto block"
             />
           </div>
         ))}
@@ -202,10 +203,10 @@ export default function OurWorks() {
       <div className="text-center mt-20">
         <a
           href="/portfolio"
-          className="inline-flex items-center gap-2 px-10 py-4 text-lg border border-black rounded-full hover:bg-black hover:text-white transition group"
+          className="inline-flex items-center justify-center gap-2 px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg border border-black rounded-full hover:bg-black hover:text-white transition group w-fit max-w-full"
         >
           View Full Portfolio
-          <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
+          <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
         </a>
       </div>
     </div>

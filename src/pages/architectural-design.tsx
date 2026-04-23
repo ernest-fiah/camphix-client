@@ -9,57 +9,57 @@ export default function ArchitecturalDesign() {
   const categories = ["Architectural Design"];
 
   const galleryItems = [
-    {
-      title: "Architectural Design",
-      image: "public/assets/architectural-design/1.jpg",
-      bg: "bg-[#2a2540]",
-    },
-    {
-      title: "Architectural Design",
-      image: "public/assets/architectural-design/2.jpg",
-      bg: "bg-[#00323f]",
-    },
-    {
-      title: "Architectural Design",
-      image: "public/assets/architectural-design/3.jpg",
-      bg: "bg-[#00365c]",
-    },
-    {
-      title: "Architectural Design",
-      image: "public/assets/architectural-design/3.jpg",
-      bg: "bg-[#374151]",
-    },
-    {
-      title: "Architectural Design",
-      image: "public/assets/architectural-design/4.jpg",
-      bg: "bg-[#5b4636]",
-    },
-    {
-      title: "Architectural Design",
-      image: "public/assets/architectural-design/5.jpg",
-      bg: "bg-[#2a2540]",
-    },
-    {
-      title: "Architectural Design",
-      image: "public/assets/architectural-design/6.jpg",
-      bg: "bg-[#00323f]",
-    },
-    {
-      title: "Architectural Design",
-      image: "public/assets/architectural-design/7.jpg",
-      bg: "bg-[#00365c]",
-    },
-    {
-      title: "Architectural Design",
-      image: "public/assets/architectural-design/8.jpg",
-      bg: "bg-[#374151]",
-    },
-    {
-      title: "Architectural Design",
-      image: "public/assets/architectural-design/9.jpg",
-      bg: "bg-[#5b4636]",
-    },
-  ];
+  {
+    title: "Architectural Design",
+    image: "/assets/architectural-design/1.webp",
+    bg: "bg-[#2a2540]",
+  },
+  {
+    title: "Architectural Design",
+    image: "/assets/architectural-design/2.webp",
+    bg: "bg-[#00323f]",
+  },
+  {
+    title: "Architectural Design",
+    image: "/assets/architectural-design/3.webp",
+    bg: "bg-[#00365c]",
+  },
+  {
+    title: "Architectural Design",
+    image: "/assets/architectural-design/3.webp",
+    bg: "bg-[#374151]",
+  },
+  {
+    title: "Architectural Design",
+    image: "/assets/architectural-design/4.webp",
+    bg: "bg-[#5b4636]",
+  },
+  {
+    title: "Architectural Design",
+    image: "/assets/architectural-design/5.webp",
+    bg: "bg-[#2a2540]",
+  },
+  {
+    title: "Architectural Design",
+    image: "/assets/architectural-design/6.webp",
+    bg: "bg-[#00323f]",
+  },
+  {
+    title: "Architectural Design",
+    image: "/assets/architectural-design/7.webp",
+    bg: "bg-[#00365c]",
+  },
+  {
+    title: "Architectural Design",
+    image: "/assets/architectural-design/8.webp",
+    bg: "bg-[#374151]",
+  },
+  {
+    title: "Architectural Design",
+    image: "/assets/architectural-design/9.webp",
+    bg: "bg-[#5b4636]",
+  },
+];
 
   const [activeCategory, setActiveCategory] = useState(
     "Architectural Design"
@@ -152,7 +152,7 @@ export default function ArchitecturalDesign() {
                 href="/contact"
                 className="w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-sm sm:text-base px-6 sm:px-10 py-4 rounded-full transition duration-300"
               >
-                BOOK A CONSULTATION
+                BOOK A CALL
                 <ArrowRight className="w-5 h-5 shrink-0" />
               </a>
             </div>
@@ -174,7 +174,7 @@ export default function ArchitecturalDesign() {
             {/* Main Card */}
             <div className="relative z-10 bg-[#374151] rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-5 shadow-2xl w-full max-w-xl mx-auto">
               <img
-                src="public/assets/architectural-design/1.jpg"
+                src="/assets/architectural-design/9.webp"
                 alt="Architectural Design"
                 className="rounded-xl sm:rounded-2xl w-full h-[220px] sm:h-[320px] md:h-[380px] object-cover"
               />

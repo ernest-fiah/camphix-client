@@ -12,58 +12,58 @@ export default function ProjectManagement() {
   =========================== */
   const categories = ["Project Management"];
 
-  const galleryItems = [
-    {
-      title: "Project Management",
-      image: "public/assets/project-management/1.jpg",
-      bg: "bg-[#2a2540]",
-    },
-    {
-      title: "Project Management",
-      image: "public/assets/project-management/2.jpg",
-      bg: "bg-[#00323f]",
-    },
-    {
-      title: "Project Management",
-      image: "public/assets/project-management/3.jpg",
-      bg: "bg-[#00365c]",
-    },
-    {
-      title: "Project Management",
-      image: "public/assets/project-management/4.jpg",
-      bg: "bg-[#374151]",
-    },
-    {
-      title: "Project Management",
-      image: "public/assets/project-management/5.jpg",
-      bg: "bg-[#5b4636]",
-    },
-    {
-      title: "Project Management",
-      image: "public/assets/project-management/6.jpg",
-      bg: "bg-[#2a2540]",
-    },
-    {
-      title: "Project Management",
-      image: "public/assets/project-management/7.jpg",
-      bg: "bg-[#00323f]",
-    },
-    {
-      title: "Project Management",
-      image: "public/assets/project-management/8.jpg",
-      bg: "bg-[#00365c]",
-    },
-    {
-      title: "Project Management",
-      image: "public/assets/project-management/9.jpg",
-      bg: "bg-[#374151]",
-    },
-    {
-      title: "Project Management",
-      image: "public/assets/project-management/10.jpg",
-      bg: "bg-[#5b4636]",
-    },
-  ];
+ const galleryItems = [
+  {
+    title: "Project Management",
+    image: "/assets/project-management/1.webp",
+    bg: "bg-[#2a2540]",
+  },
+  {
+    title: "Project Management",
+    image: "/assets/project-management/2.webp",
+    bg: "bg-[#00323f]",
+  },
+  {
+    title: "Project Management",
+    image: "/assets/project-management/3.webp",
+    bg: "bg-[#00365c]",
+  },
+  {
+    title: "Project Management",
+    image: "/assets/project-management/1.webp",
+    bg: "bg-[#374151]",
+  },
+  {
+    title: "Project Management",
+    image: "/assets/project-management/2.webp",
+    bg: "bg-[#5b4636]",
+  },
+  {
+    title: "Project Management",
+    image: "/assets/project-management/3.webp",
+    bg: "bg-[#2a2540]",
+  },
+  {
+    title: "Project Management",
+    image: "/assets/project-management/1.webp",
+    bg: "bg-[#00323f]",
+  },
+  {
+    title: "Project Management",
+    image: "/assets/project-management/2.webp",
+    bg: "bg-[#00365c]",
+  },
+  {
+    title: "Project Management",
+    image: "/assets/project-management/3.webp",
+    bg: "bg-[#374151]",
+  },
+  {
+    title: "Project Management",
+    image: "/assets/project-management/1.webp",
+    bg: "bg-[#5b4636]",
+  },
+];
 
   const [activeCategory, setActiveCategory] =
     useState("Project Management");
@@ -172,7 +172,7 @@ export default function ProjectManagement() {
             {/* Main Card */}
             <div className="relative z-10 bg-[#374151] rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-5 shadow-2xl w-full max-w-xl mx-auto">
               <img
-                src="public/assets/project-management/1.jpg"
+                src="/assets/project-management/3.webp"
                 alt="Project Management"
                 className="rounded-xl sm:rounded-2xl w-full h-[220px] sm:h-[320px] md:h-[380px] object-cover"
               />

@@ -9,57 +9,57 @@ export default function ElectricalMechanicalWorks() {
   const categories = ["Electrical & Mechanical Works"];
 
   const galleryItems = [
-    {
-      title: "Electrical & Mechanical Works",
-      image: "public/assets/electrical-&-mechanical-works/1.jpg",
-      bg: "bg-[#2a2540]",
-    },
-    {
-      title: "Electrical & Mechanical Works",
-      image: "public/assets/electrical-&-mechanical-works/2.jpg",
-      bg: "bg-[#00323f]",
-    },
-    {
-      title: "Electrical & Mechanical Works",
-      image: "public/assets/electrical-&-mechanical-works/3.jpg",
-      bg: "bg-[#00365c]",
-    },
-    {
-      title: "Electrical & Mechanical Works",
-      image: "public/assets/electrical-&-mechanical-works/4.jpg",
-      bg: "bg-[#374151]",
-    },
-    {
-      title: "Electrical & Mechanical Works",
-      image: "public/assets/electrical-&-mechanical-works/5.jpg",
-      bg: "bg-[#5b4636]",
-    },
-    {
-      title: "Electrical & Mechanical Works",
-      image: "public/assets/electrical-&-mechanical-works/6.jpg",
-      bg: "bg-[#2a2540]",
-    },
-    {
-      title: "Electrical & Mechanical Works",
-      image: "public/assets/electrical-&-mechanical-works/7.jpg",
-      bg: "bg-[#00323f]",
-    },
-    {
-      title: "Electrical & Mechanical Works",
-      image: "public/assets/electrical-&-mechanical-works/8.jpg",
-      bg: "bg-[#00365c]",
-    },
-    {
-      title: "Electrical & Mechanical Works",
-      image: "public/assets/electrical-&-mechanical-works/9.jpg",
-      bg: "bg-[#374151]",
-    },
-    {
-      title: "Electrical & Mechanical Works",
-      image: "public/assets/electrical-&-mechanical-works/10.jpg",
-      bg: "bg-[#5b4636]",
-    },
-  ];
+  {
+    title: "Electrical & Mechanical Works",
+    image: "assets/electrical-&-mechanical-works/1.webp",
+    bg: "bg-[#2a2540]",
+  },
+  {
+    title: "Electrical & Mechanical Works",
+    image: "assets/electrical-&-mechanical-works/2.webp",
+    bg: "bg-[#00323f]",
+  },
+  {
+    title: "Electrical & Mechanical Works",
+    image: "assets/electrical-&-mechanical-works/3.webp",
+    bg: "bg-[#00365c]",
+  },
+  {
+    title: "Electrical & Mechanical Works",
+    image: "assets/electrical-&-mechanical-works/4.webp",
+    bg: "bg-[#374151]",
+  },
+  {
+    title: "Electrical & Mechanical Works",
+    image: "assets/electrical-&-mechanical-works/5.webp",
+    bg: "bg-[#5b4636]",
+  },
+  {
+    title: "Electrical & Mechanical Works",
+    image: "assets/electrical-&-mechanical-works/6.webp",
+    bg: "bg-[#2a2540]",
+  },
+  {
+    title: "Electrical & Mechanical Works",
+    image: "assets/electrical-&-mechanical-works/1.webp",
+    bg: "bg-[#00323f]",
+  },
+  {
+    title: "Electrical & Mechanical Works",
+    image: "assets/electrical-&-mechanical-works/2.webp",
+    bg: "bg-[#00365c]",
+  },
+  {
+    title: "Electrical & Mechanical Works",
+    image: "assets/electrical-&-mechanical-works/3.webp",
+    bg: "bg-[#374151]",
+  },
+  {
+    title: "Electrical & Mechanical Works",
+    image: "assets/electrical-&-mechanical-works/4.webp",
+    bg: "bg-[#5b4636]",
+  },
+];
 
   const [activeCategory, setActiveCategory] = useState(
     "Electrical & Mechanical Works"
@@ -168,7 +168,7 @@ export default function ElectricalMechanicalWorks() {
             {/* Main Card */}
             <div className="relative z-10 bg-[#374151] rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-5 shadow-2xl w-full max-w-xl mx-auto">
               <img
-                src="public/assets/electrical-&-mechanical-works/1.jpg"
+                src="/assets/electrical-&-mechanical-works/1.webp"
                 alt="Electrical Mechanical Works"
                 className="rounded-xl sm:rounded-2xl w-full h-[220px] sm:h-[320px] md:h-[380px] object-cover"
               />

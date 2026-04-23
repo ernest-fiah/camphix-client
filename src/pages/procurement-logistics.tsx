@@ -15,44 +15,57 @@ export default function ProcurementLogistics() {
   ];
 
   const galleryItems = [
-    {
-      title: "Procurement & Logistics",
-      image: "public/assets/procurement-logistics/1.jpg",
-      bg: "bg-[#2a2540]",
-    },
-    {
-      title: "Procurement & Logistics",
-      image: "public/assets/procurement-logistics/2.jpg",
-      bg: "bg-[#00323f]",
-    },
-    {
-      title: "Procurement & Logistics",
-      image: "public/assets/procurement-logistics/3.jpg",
-      bg: "bg-[#00365c]",
-    },
-    {
-      title: "Procurement & Logistics",
-      image: "public/assets/procurement-logistics/4.jpg",
-      bg: "bg-[#374151]",
-    },
-    {
-      title: "Procurement & Logistics",
-      image: "public/assets/procurement-logistics/5.jpg",
-      bg: "bg-[#5b4636]",
-    },
-    {
-      title: "Procurement & Logistics",
-      image: "public/assets/procurement-logistics/6.jpg",
-      bg: "bg-[#2a2540]",
-    },
-    {
-      title: "Procurement & Logistics",
-      image: "public/assets/procurement-logistics/7.jpg",
-      bg: "bg-[#00323f]",
-    },
-    
-  ];
-
+  {
+    title: "Procurement & Logistics",
+    image: "assets/procurement-logistics/1.webp",
+    bg: "bg-[#2a2540]",
+  },
+  {
+    title: "Procurement & Logistics",
+    image: "assets/procurement-logistics/2.webp",
+    bg: "bg-[#00323f]",
+  },
+  {
+    title: "Procurement & Logistics",
+    image: "assets/procurement-logistics/3.webp",
+    bg: "bg-[#00365c]",
+  },
+  {
+    title: "Procurement & Logistics",
+    image: "assets/procurement-logistics/4.webp",
+    bg: "bg-[#374151]",
+  },
+  {
+    title: "Procurement & Logistics",
+    image: "assets/procurement-logistics/5.webp",
+    bg: "bg-[#5b4636]",
+  },
+  {
+    title: "Procurement & Logistics",
+    image: "assets/procurement-logistics/6.webp",
+    bg: "bg-[#2a2540]",
+  },
+  {
+    title: "Procurement & Logistics",
+    image: "assets/procurement-logistics/7.webp",
+    bg: "bg-[#00323f]",
+  },
+  {
+    title: "Procurement & Logistics",
+    image: "assets/procurement-logistics/1.webp",
+    bg: "bg-[#5b4636]",
+  },
+  {
+    title: "Procurement & Logistics",
+    image: "assets/procurement-logistics/2.webp",
+    bg: "bg-[#2a2540]",
+  },
+  {
+    title: "Procurement & Logistics",
+    image: "assets/procurement-logistics/3.webp",
+    bg: "bg-[#00323f]",
+  },
+];
   const [activeCategory, setActiveCategory] = useState(
     "Procurement & Logistics"
   );
@@ -171,7 +184,7 @@ export default function ProcurementLogistics() {
             {/* Main Card */}
             <div className="relative z-10 bg-[#374151] rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-5 shadow-2xl w-full max-w-xl mx-auto">
               <img
-                src="public/assets/procurement-logistics/1.jpg"
+                src="/assets/procurement-logistics/1.webp"
                 alt="Procurement & Logistics"
                 className="rounded-xl sm:rounded-2xl w-full h-[220px] sm:h-[320px] md:h-[380px] object-cover"
               />

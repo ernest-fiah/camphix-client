@@ -155,15 +155,7 @@ export default function MobileNavbar() {
       <div className="fixed bottom-0 left-0 w-full md:hidden z-[9999]">
         <div className="bg-white/90 backdrop-blur-2xl border border-white/30 shadow-2xl max-w-md mx-auto overflow-hidden relative">
 
-          {/* TOP GLOW */}
-          <div className="absolute inset-x-0 top-0 h-[3px] overflow-hidden">
-            <div className="absolute inset-0 bg-white/10" />
-
-            <div className="absolute inset-0 bg-gradient-to-r from-black via-gray-500 via-white/60 to-black animate-[shine_4s_linear_infinite]" />
-
-            <div className="absolute inset-0 blur-md bg-gradient-to-r from-black/80 via-gray-400/70 to-black/80 animate-[shine_4s_linear_infinite]" />
-          </div>
-
+          
           <style>{`
             @keyframes shine {
               0% {

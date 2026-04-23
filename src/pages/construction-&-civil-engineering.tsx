@@ -3,75 +3,72 @@ import { ArrowRight, ChevronRight, ChevronLeft } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function ConstructionCivilEngineering() {
-  /* ===========================
-     GALLERY DATA (ADDED ONLY)
-  =========================== */
-  const categories = [
+  const categories = ["Construction & Civil Engineering"];
+
+const galleryItems = [
+  {
+    title: "Construction & Civil Engineering",
+    image: "/assets/construction/6.webp",
+    bg: "bg-[#2a2540]",
+  },
+  {
+    title: "Construction & Civil Engineering",
+    image: "/assets/construction/2.webp",
+    bg: "bg-[#00323f]",
+  },
+  {
+    title: "Construction & Civil Engineering",
+    image: "/assets/construction/3.webp",
+    bg: "bg-[#00365c]",
+  },
+  {
+    title: "Construction & Civil Engineering",
+    image: "/assets/construction/4.webp",
+    bg: "bg-[#374151]",
+  },
+  {
+    title: "Construction & Civil Engineering",
+    image: "/assets/construction/5.webp",
+    bg: "bg-[#5b4636]",
+  },
+  {
+    title: "Construction & Civil Engineering",
+    image: "/assets/construction/6.webp",
+    bg: "bg-[#2a2540]",
+  },
+  {
+    title: "Construction & Civil Engineering",
+    image: "/assets/construction/7.webp",
+    bg: "bg-[#00323f]",
+  },
+  {
+    title: "Construction & Civil Engineering",
+    image: "/assets/construction/8.webp",
+    bg: "bg-[#00365c]",
+  },
+  {
+    title: "Construction & Civil Engineering",
+    image: "/assets/construction/9.webp",
+    bg: "bg-[#374151]",
+  },
+  {
+    title: "Construction & Civil Engineering",
+    image: "/assets/construction/10.webp",
+    bg: "bg-[#5b4636]",
+  },
+];
+
+  const [activeCategory, setActiveCategory] = useState(
     "Construction & Civil Engineering",
-  ];
-
-  const galleryItems = [
-    {
-      title: "Construction & Civil Engineering",
-      image: "public/assets/construction/6.jpg",
-      bg: "bg-[#2a2540]",
-    },
-    {
-      title: "Construction & Civil Engineering",
-      image: "public/assets/construction/2.jpg",
-      bg: "bg-[#00323f]",
-    },
-    {
-      title: "Construction & Civil Engineering",
-      image: "public/assets/construction/3.jpg",
-      bg: "bg-[#00365c]",
-    },
-    {
-      title: "Construction & Civil Engineering",
-      image: "public/assets/construction/4.jpg",
-      bg: "bg-[#374151]",
-    },
-    {
-      title: "Construction & Civil Engineering",
-      image: "public/assets/construction/5.jpg",
-      bg: "bg-[#5b4636]",
-    },
-    {
-      title: "Construction & Civil Engineering",
-      image: "public/assets/construction/6.jpg",
-      bg: "bg-[#2a2540]",
-    },
-    {
-      title: "Construction & Civil Engineering",
-      image: "public/assets/construction/7.jpg",
-      bg: "bg-[#00323f]",
-    },
-    {
-      title: "Construction & Civil Engineering",
-      image: "public/assets/construction/8.jpg",
-      bg: "bg-[#00365c]",
-    },
-    {
-      title: "Construction & Civil Engineering",
-      image: "public/assets/construction/9.jpg",
-      bg: "bg-[#374151]",
-    },
-    {
-      title: "Construction & Civil Engineering",
-      image: "public/assets/construction/10.jpg",
-      bg: "bg-[#5b4636]",
-    },
-  ];
-
-  const [activeCategory, setActiveCategory] = useState("Logo");
+  );
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const timer = setInterval(() => {
       nextSlide();
     }, 3500);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(timer);
   }, [current]);
 
   const nextSlide = () => {
@@ -79,9 +76,7 @@ export default function ConstructionCivilEngineering() {
   };
 
   const prevSlide = () => {
-    setCurrent((prev) =>
-      prev === 0 ? galleryItems.length - 1 : prev - 1
-    );
+    setCurrent((prev) => (prev === 0 ? galleryItems.length - 1 : prev - 1));
   };
 
   const visibleCards = [
@@ -92,108 +87,121 @@ export default function ConstructionCivilEngineering() {
 
   return (
     <motion.section
-      initial={{ opacity: 0, y: 40, scale: 0.97 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true, amount: 0.15 }}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.7 }}
-      className="w-full bg-[#f5f1e8] text-[#111827] overflow-hidden font-sans"
-      style={{
-        fontFamily: "'Inter', sans-serif",
-      }}
+      className="w-full bg-[#f5f1e8] text-[#111827] overflow-hidden"
     >
-      {/* HERO SECTION */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 py-12 sm:py-16 md:py-20 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14 lg:gap-16 items-center">
-
-          {/* LEFT CONTENT */}
+      {/* HERO */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 py-12 sm:py-16 md:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          {/* LEFT */}
           <motion.div
-            initial={{ opacity: 0, x: -60 }}
+            initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="w-full"
           >
             {/* BREADCRUMB */}
-            <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm md:text-base mb-6">
+            <div className="flex flex-wrap items-center gap-2 text-sm mb-5">
               <a
                 href="/"
-                className="text-yellow-600 font-semibold hover:text-yellow-700 transition"
+                className="text-yellow-600 font-semibold hover:text-yellow-700"
               >
                 Home
               </a>
 
-              <ChevronRight className="w-4 h-4 text-gray-500 shrink-0" />
+              <ChevronRight className="w-4 h-4 text-gray-500" />
 
-              <span className="text-gray-700 break-words">
+              <span className="text-gray-700">
                 Construction & Civil Engineering
               </span>
             </div>
 
             {/* TITLE */}
-            <h1 className="text-[2rem] leading-[1.08] sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight break-words">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
               Construction <br />
               & Civil <br />
               Engineering
             </h1>
 
             {/* TEXT */}
-            <p className="mt-5 sm:mt-7 text-[0.97rem] sm:text-lg md:text-xl leading-7 sm:leading-9 md:leading-10 text-gray-700 text-justify">
-              Camphix Enterprise delivers world-class construction and civil
-              engineering solutions for residential, commercial, industrial and
-              government projects. We combine innovation, quality materials and
-              expert execution to build durable infrastructure that lasts.
+            <p className="mt-6 text-base sm:text-lg md:text-xl leading-8 text-gray-700">
+              Camphix Enterprise delivers premium construction and civil
+              engineering services for residential, commercial and industrial
+              developments. We combine innovation, quality craftsmanship and
+              expert execution to build infrastructure that stands the test of
+              time.
             </p>
 
             {/* BUTTON */}
-            <div className="mt-7 sm:mt-10">
-              <a
-                href="/contact"
-                className="w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-sm sm:text-base px-6 sm:px-10 py-4 rounded-full transition duration-300"
+            <div className="mt-8">
+              <motion.a
+                href="tel:+233541728294"
+                initial={{ opacity: 0, y: 25, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                whileHover={{
+                  scale: 1.05,
+                  y: -3,
+                  boxShadow: "0px 18px 35px rgba(0,0,0,0.18)",
+                }}
+                whileTap={{ scale: 0.96 }}
+                className="group relative w-full sm:w-auto inline-flex justify-center items-center gap-3 px-6 sm:px-10 py-4 rounded-full bg-yellow-400 text-black font-semibold overflow-hidden transition"
               >
-                BOOK A CONSULTATION
-                <ArrowRight className="w-5 h-5 shrink-0" />
-              </a>
+                {/* Shine Effect */}
+                <span className="absolute inset-0 bg-white/30 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 skew-x-12"></span>
+
+                {/* Pulse Ring */}
+                <span className="absolute inset-0 rounded-full border border-yellow-300 animate-ping opacity-20"></span>
+
+                <span className="relative z-10">BOOK A CALL</span>
+
+                <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </motion.a>
             </div>
           </motion.div>
 
-          {/* RIGHT CONTENT */}
+          {/* RIGHT */}
           <motion.div
-            initial={{ opacity: 0, x: 60, scale: 0.95 }}
-            whileInView={{ opacity: 1, x: 0, scale: 1 }}
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative w-full"
+            className="relative"
           >
-            {/* Background Shape */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-[220px] h-[220px] sm:w-[320px] sm:h-[320px] md:w-[420px] md:h-[420px] lg:w-[500px] lg:h-[500px] border-[20px] sm:border-[28px] md:border-[35px] lg:border-[40px] border-yellow-200 rounded-[60px] sm:rounded-[90px] rotate-45 opacity-60"></div>
+            {/* SHAPE */}
+            <div className="absolute inset-0 flex justify-center items-center">
+              <div className="w-[220px] h-[220px] sm:w-[320px] sm:h-[320px] md:w-[420px] md:h-[420px] border-[18px] sm:border-[28px] border-yellow-200 rounded-[60px] rotate-45 opacity-60"></div>
             </div>
 
-            {/* Main Card */}
-            <div className="relative z-10 bg-[#374151] rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-5 shadow-2xl w-full max-w-xl mx-auto">
+            {/* MAIN IMAGE */}
+            <div className="relative z-10 bg-[#374151] rounded-3xl p-3 sm:p-4 shadow-2xl max-w-xl mx-auto">
               <img
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80"
-                alt="Construction Site"
-                className="rounded-xl sm:rounded-2xl w-full h-[220px] sm:h-[320px] md:h-[380px] object-cover"
+                src="/assets/construction/2.webp"
+                alt="Construction"
+                className="rounded-2xl w-full h-[240px] sm:h-[320px] md:h-[420px] object-cover"
               />
             </div>
 
-            {/* Floating Card */}
+            {/* FLOAT CARD */}
             <motion.div
-              animate={{ y: [0, -8, 0] }}
+              animate={{ y: [0, -10, 0] }}
               transition={{
                 duration: 3,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="relative sm:absolute sm:bottom-0 sm:right-0 mt-4 sm:mt-0 bg-orange-500 rounded-2xl px-4 sm:px-6 py-4 sm:py-5 shadow-xl z-20 w-full sm:w-[280px] md:w-[320px]"
+              className="relative sm:absolute sm:bottom-0 sm:right-0 mt-4 sm:mt-0 bg-orange-500 rounded-2xl p-5 shadow-xl z-20 w-full sm:w-[280px]"
             >
-              <h4 className="text-white font-bold text-base sm:text-lg md:text-xl leading-tight">
+              <h4 className="text-white font-bold text-lg sm:text-xl">
                 Trusted Engineering Excellence
               </h4>
 
-              <p className="text-orange-100 text-sm sm:text-base mt-2 sm:mt-3 leading-6 sm:leading-7 text-justify">
-                Building roads, structures, drainage systems, estates and modern
+              <p className="text-orange-100 mt-3 text-sm sm:text-base leading-7">
+                Building roads, estates, drainage systems and modern
                 infrastructure across Africa.
               </p>
             </motion.div>
@@ -201,10 +209,8 @@ export default function ConstructionCivilEngineering() {
         </div>
       </div>
 
-      {/* BENEFITS SECTION */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 pb-14 sm:pb-20 md:pb-24 lg:pb-28">
-
-        {/* TITLE */}
+      {/* BENEFITS */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 pb-16 sm:pb-24">
         <motion.div
           initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -212,127 +218,107 @@ export default function ConstructionCivilEngineering() {
           transition={{ duration: 0.7 }}
           className="text-center"
         >
-          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+          <h2 className="text-3xl sm:text-5xl font-bold leading-tight">
             <span className="text-yellow-600">Benefits</span> of Construction &
             Civil Engineering
           </h2>
 
-          <p className="mt-5 sm:mt-7 max-w-4xl mx-auto text-[0.97rem] sm:text-lg md:text-xl leading-7 sm:leading-9 md:leading-10 text-gray-700 text-justify">
-            Our construction and engineering services help clients build
-            stronger, safer and more efficient projects. From planning to
-            execution, we ensure long-term value and structural excellence.
+          <p className="mt-6 text-base sm:text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-8">
+            We help clients build stronger, safer and more efficient projects.
+            From planning to completion, we deliver long-term value and
+            structural excellence.
           </p>
         </motion.div>
 
         {/* CARDS */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7 md:gap-10 mt-12 sm:mt-16 md:mt-20">
-
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-14">
           {[
             {
               icon: "🏗️",
-              title: "Strong & Durable Structures",
-              text:
-                "We construct buildings, bridges and facilities designed for strength, safety and durability using modern engineering standards and quality materials.",
+              title: "Strong Structures",
+              text: "Buildings and facilities engineered for durability, safety and long-term performance.",
             },
             {
               icon: "📐",
-              title: "Smart Planning & Design",
-              text:
-                "Our experts carefully plan each project for efficiency, cost-effectiveness and smooth execution from foundation to final delivery.",
+              title: "Smart Planning",
+              text: "Efficient project planning that saves time, cost and resources from start to finish.",
             },
             {
               icon: "🚧",
-              title: "Reliable Project Delivery",
-              text:
-                "We complete projects on time and to specification while maintaining strict quality control, safety compliance and client satisfaction.",
+              title: "Reliable Delivery",
+              text: "Projects completed on schedule with strict quality control and client satisfaction.",
             },
           ].map((card, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 45, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{
-                duration: 0.55,
-                delay: index * 0.15,
+                duration: 0.5,
+                delay: index * 0.12,
               }}
+              className="bg-white rounded-3xl p-6 shadow-md"
             >
-              <div className="flex items-start gap-4 mb-5">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-yellow-400 flex items-center justify-center text-xl sm:text-3xl shrink-0">
-                  {card.icon}
-                </div>
-
-                <h3 className="text-xl sm:text-3xl font-bold leading-tight">
-                  {card.title}
-                </h3>
+              <div className="w-14 h-14 rounded-full bg-yellow-400 flex items-center justify-center text-2xl mb-5">
+                {card.icon}
               </div>
 
-              <div className="border-t border-gray-300 pt-5 sm:pt-7">
-                <p className="text-[0.97rem] sm:text-lg md:text-xl leading-7 sm:leading-9 text-gray-700 text-justify">
-                  {card.text}
-                </p>
-              </div>
+              <h3 className="text-2xl font-bold">{card.title}</h3>
+
+              <p className="mt-4 text-gray-700 leading-8">{card.text}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* ================================= */}
-        {/* NEW PORTFOLIO GALLERY LIKE IMAGE */}
-        {/* ================================= */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 pb-20">
-
-          {/* TITLE */}
+        {/* PORTFOLIO */}
+        <div className="mt-20">
           <motion.div
             initial={{ opacity: 0, y: 35 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-center mb-10"
+            className="text-center"
           >
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight mt-10">
-              Take a look at some of our Construction & CivilEngineering work
+            <h2 className="text-3xl sm:text-5xl font-bold leading-tight">
+              Our Recent Construction Projects
             </h2>
           </motion.div>
 
-          {/* FILTER BUTTONS */}
-          <div className="flex flex-wrap justify-center gap-4 mb-14">
+          {/* FILTER */}
+          <div className="flex justify-center mt-8 px-2">
             {categories.map((item, index) => (
-              <motion.button
+              <button
                 key={index}
-                whileHover={{ scale: 1.06 }}
-                whileTap={{ scale: 0.95 }}
                 onClick={() => setActiveCategory(item)}
-                className={`px-6 py-3 rounded-full border text-sm sm:text-base transition-all duration-300
+                className={`px-5 sm:px-7 py-3 rounded-full text-sm sm:text-base border transition
                   ${
                     activeCategory === item
                       ? "bg-yellow-400 border-yellow-400 text-black"
-                      : "border-gray-400 text-[#111827] hover:border-yellow-400"
-                  }
-                `}
+                      : "border-gray-400 text-gray-800"
+                  }`}
               >
                 {item}
-              </motion.button>
+              </button>
             ))}
           </div>
 
-          {/* SLIDER */}
-          <div className="relative">
-
-            {/* CARDS */}
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          {/* GALLERY */}
+          <div className="relative mt-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
               {visibleCards.map((item, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 40, scale: 0.95 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  whileHover={{ y: -8 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{
-                    duration: 0.6,
+                    duration: 0.5,
                     delay: index * 0.08,
                   }}
-                  whileHover={{ y: -10, scale: 1.02 }}
-                  className={`${item.bg} rounded-[28px] p-5 h-[250px] sm:h-[400px] overflow-hidden shadow-xl`}
+                  className={`${item.bg} rounded-3xl p-4 h-[260px] sm:h-[340px] md:h-[400px] shadow-xl`}
                 >
-                  <div className="w-full h-full rounded-[24px] overflow-hidden bg-white/10">
+                  <div className="w-full h-full overflow-hidden rounded-2xl">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -343,37 +329,36 @@ export default function ConstructionCivilEngineering() {
               ))}
             </div>
 
-            {/* LEFT BUTTON */}
-            <button
-              onClick={prevSlide}
-              className="absolute -left-2 md:-left-6 bottom-[-70px] w-12 h-12 rounded-full bg-yellow-300 hover:bg-yellow-400 flex items-center justify-center shadow-lg"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
+            {/* NAVIGATION */}
+            <div className="flex justify-center gap-4 mt-8">
+              <button
+                onClick={prevSlide}
+                className="w-12 h-12 rounded-full bg-yellow-300 hover:bg-yellow-400 flex items-center justify-center shadow"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
 
-            {/* RIGHT BUTTON */}
-            <button
-              onClick={nextSlide}
-              className="absolute -right-2 md:-right-6 bottom-[-70px] w-12 h-12 rounded-full bg-yellow-300 hover:bg-yellow-400 flex items-center justify-center shadow-lg"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
+              <button
+                onClick={nextSlide}
+                className="w-12 h-12 rounded-full bg-yellow-300 hover:bg-yellow-400 flex items-center justify-center shadow"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
 
             {/* DOTS */}
-            <div className="flex justify-center gap-5 mt-14">
+            <div className="flex justify-center gap-3 mt-6 flex-wrap">
               {galleryItems.map((_, index) => (
-                <motion.button
+                <button
                   key={index}
-                  whileHover={{ scale: 1.25 }}
                   onClick={() => setCurrent(index)}
-                  className={`w-3 h-3 rounded-full transition-all
+                  className={`w-3 h-3 rounded-full transition
                     ${
                       current === index
                         ? "bg-orange-400 scale-125"
                         : "bg-yellow-300"
-                    }
-                  `}
-                />
+                    }`}
+                ></button>
               ))}
             </div>
           </div>
