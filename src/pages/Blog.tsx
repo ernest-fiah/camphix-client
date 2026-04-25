@@ -1,12 +1,26 @@
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function BlogPage() {
+type BlogPost = {
+  title: string;
+  category: string;
+  img: string;
+  excerpt: string;
+};
+
+type Props = {
+  setSelectedPost: (post: BlogPost) => void;
+};
+
+export default function BlogPage({ setSelectedPost }: Props) {
+  const navigate = useNavigate();
+
   const [active, setActive] = useState("All");
 
   const categories = ["All", "Construction", "Design", "Engineering"];
 
-  const posts = [
+  const posts: BlogPost[] = [
     {
       title: "Modern Construction Techniques for 2026",
       category: "Construction",
@@ -58,6 +72,11 @@ export default function BlogPage() {
 
   const featured = posts[0];
 
+  const openPost = (post: BlogPost) => {
+    setSelectedPost(post);
+    navigate("/blog/read");
+  };
+
   return (
     <div className="bg-white text-black">
 
@@ -104,7 +123,10 @@ export default function BlogPage() {
               {featured.excerpt}
             </p>
 
-            <button className="mt-6 inline-flex items-center gap-2 border border-black px-6 py-3 hover:bg-black hover:text-white transition">
+            <button
+              onClick={() => openPost(featured)}
+              className="mt-6 inline-flex items-center gap-2 border border-black px-6 py-3 hover:bg-black hover:text-white transition"
+            >
               Read Full Article
               <ArrowRight className="w-4 h-4" />
             </button>
@@ -166,7 +188,10 @@ export default function BlogPage() {
                     {post.excerpt}
                   </p>
 
-                  <button className="mt-4 text-sm flex items-center gap-1 text-gray-700 hover:text-black">
+                  <button
+                    onClick={() => openPost(post)}
+                    className="mt-4 text-sm flex items-center gap-1 text-gray-700 hover:text-black"
+                  >
                     Read More <ArrowRight className="w-3 h-3" />
                   </button>
                 </div>
@@ -203,15 +228,21 @@ export default function BlogPage() {
               <div className="space-y-4">
 
                 {posts.slice(0, 3).map((p, i) => (
-                  <div key={i} className="flex gap-3">
+                  <div
+                    key={i}
+                    onClick={() => openPost(p)}
+                    className="flex gap-3 cursor-pointer"
+                  >
                     <img
                       src={p.img}
                       className="w-14 h-14 object-cover grayscale"
                     />
+
                     <div>
                       <p className="text-sm text-gray-700 hover:text-black">
                         {p.title}
                       </p>
+
                       <span className="text-xs text-gray-500">
                         {p.category}
                       </span>

@@ -146,7 +146,7 @@ export default function ProcurementLogistics() {
 
             {/* TEXT */}
             <p className="mt-5 sm:mt-7 text-[0.97rem] sm:text-lg md:text-xl leading-7 sm:leading-9 md:leading-10 text-gray-700 text-justify">
-              Camphix Enterprise provides efficient
+              Camphix Company provides efficient
               procurement and logistics solutions
               that help businesses source, manage,
               and deliver goods seamlessly. We

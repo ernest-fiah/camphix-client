@@ -42,27 +42,27 @@ export default function WebsiteUIUXDesign() {
   },
   {
     title: "Website & UI/UX Design",
-    image: "/assets/uiuxdesign/6.webp",
+    image: "/assets/uiuxdesign/4.webp",
     bg: "bg-[#2a2540]",
   },
   {
     title: "Website & UI/UX Design",
-    image: "/assets/uiuxdesign/7.webp",
+    image: "/assets/uiuxdesign/1.webp",
     bg: "bg-[#00323f]",
   },
   {
     title: "Website & UI/UX Design",
-    image: "/assets/uiuxdesign/8.webp",
+    image: "/assets/uiuxdesign/2.webp",
     bg: "bg-[#00365c]",
   },
   {
     title: "Website & UI/UX Design",
-    image: "/assets/uiuxdesign/9.webp",
+    image: "/assets/uiuxdesign/3.webp",
     bg: "bg-[#374151]",
   },
   {
     title: "Website & UI/UX Design",
-    image: "/assets/uiuxdesign/10.webp",
+    image: "/assets/uiuxdesign/4.webp",
     bg: "bg-[#5b4636]",
   },
 ];
@@ -175,7 +175,7 @@ export default function WebsiteUIUXDesign() {
 
             {/* TEXT */}
             <p className="mt-5 sm:mt-7 text-[0.97rem] sm:text-lg md:text-xl leading-7 sm:leading-9 md:leading-10 text-gray-700 text-justify">
-              Camphix Enterprise designs modern,
+              Camphix Company designs modern,
               responsive and user-focused websites
               with intuitive UI/UX experiences. We
               combine creativity, usability, and
@@ -240,7 +240,7 @@ export default function WebsiteUIUXDesign() {
             {/* Main Card */}
             <div className="relative z-10 bg-[#374151] rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-5 shadow-2xl w-full max-w-xl mx-auto">
               <img
-                src="/assets/uiuxdesign/hero.webp"
+                src="/assets/uiuxdesign/1.webp"
                 alt="Website & UI/UX Design"
                 className="rounded-xl sm:rounded-2xl w-full h-[220px] sm:h-[320px] md:h-[380px] object-cover"
               />

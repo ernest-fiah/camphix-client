@@ -26,53 +26,142 @@ import WebsiteUIUXDesign from "./pages/web-uiux";
 import PrintingProduction from "./pages/printing-production";
 import ProcurementLogistics from "./pages/procurement-logistics";
 import StrategicConsultancy from "./pages/strategic-consultancy";
+
 import BlogPage from "./pages/Blog";
+import BlogReadMore from "./pages/BlogReadMore";
 
 import SplashScreen from "./components/SplashScreen";
+import VideographyMediaProduction from "./pages/videography-media-production";
+import CookieBanner from "./components/Cookies";
+
+type BlogPost = {
+  title: string;
+  category: string;
+  img: string;
+  excerpt: string;
+};
 
 export default function App() {
-    const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-    return (
+  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
+
+  return (
+    <>
+      {/* SPLASH SCREEN */}
+      {loading && <SplashScreen onDone={() => setLoading(false)} />}
+
+      {/* MAIN APP */}
+      {!loading && (
         <>
-            {/* ✅ SPLASH SCREEN */}
-            {loading && <SplashScreen onDone={() => setLoading(false)} />}
+          <Navbar />
+          <MobileNavbar />
+          <ScrollToTop />
+          <CookieBanner />
 
-            {/* ✅ MAIN APP (hidden until splash ends) */}
-            {!loading && (
-                <>
-                    <Navbar />
-                    <MobileNavbar />
-                    <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/OurWorks" element={<OurWorks />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
 
-                    <Routes>
-                        <Route path='/' element={<Home />} />
-                        <Route path="/OurWorks" element={<OurWorks />} />
-                        <Route path="/services" element={<Services />} />
-                        <Route path="/projects" element={<Projects />} />
-                        <Route path="/portfolio" element={<Portfolio />} />
-                        <Route path="/about" element={<About />} />
-                        <Route path="/contact" element={<Contact />} />
-                        <Route path="/construction-&-civil-engineering" element={<ConstructionCivilEngineering/>} />
-                        <Route path="/land-surveying-&-consultancy" element={<LandSurveyingConsultancy/>} />
-                        <Route path="/architectural-design" element={<ArchitecturalDesign />} />
-                        <Route path="/real-estate-development" element={<RealEstateDevelopment />} />
-                        <Route path="/project-management" element={<ProjectManagement />} />
-                        <Route path="/building-materials-supply" element={<BuildingMaterialsSupply />} />
-                        <Route path="/electrical-mechanical" element={<ElectricalMechanicalWorks />} />
-                        <Route path="/graphic-design-&-branding" element={<GraphicDesignBranding />} />
-                        <Route path="/videography-media-production" element={<ProjectManagement />} />
-                        <Route path="/digital-marketing" element={<DigitalMarketing />} />
-                        <Route path="/web-uiux" element={<WebsiteUIUXDesign />} />
-                        <Route path="/printing-production" element={<PrintingProduction />} />
-                        <Route path="/procurement-logistics" element={<ProcurementLogistics />} />
-                        <Route path="/strategic-consultancy" element={<StrategicConsultancy />} />
-                        <Route path="/blog" element={<BlogPage />} />
-                    </Routes>
+            <Route
+              path="/construction-&-civil-engineering"
+              element={<ConstructionCivilEngineering />}
+            />
 
-                    <Footer />
-                </>
-            )}
+            <Route
+              path="/land-surveying-&-consultancy"
+              element={<LandSurveyingConsultancy />}
+            />
+
+            <Route
+              path="/architectural-design"
+              element={<ArchitecturalDesign />}
+            />
+
+            <Route
+              path="/real-estate-development"
+              element={<RealEstateDevelopment />}
+            />
+
+            <Route
+              path="/project-management"
+              element={<ProjectManagement />}
+            />
+
+            <Route
+              path="/building-materials-supply"
+              element={<BuildingMaterialsSupply />}
+            />
+
+            <Route
+              path="/electrical-mechanical"
+              element={<ElectricalMechanicalWorks />}
+            />
+
+            <Route
+              path="/graphic-design-&-branding"
+              element={<GraphicDesignBranding />}
+            />
+
+            <Route
+              path="/videography-media-production"
+              element={<VideographyMediaProduction />}
+            />
+
+            <Route
+              path="/digital-marketing"
+              element={<DigitalMarketing />}
+            />
+
+            <Route
+              path="/web-uiux"
+              element={<WebsiteUIUXDesign />}
+            />
+
+            <Route
+              path="/printing-production"
+              element={<PrintingProduction />}
+            />
+
+            <Route
+              path="/procurement-logistics"
+              element={<ProcurementLogistics />}
+            />
+
+            <Route
+              path="/strategic-consultancy"
+              element={<StrategicConsultancy />}
+            />
+
+            {/* BLOG PAGE */}
+            <Route
+              path="/blog"
+              element={
+                <BlogPage
+                  setSelectedPost={setSelectedPost}
+                />
+              }
+            />
+
+            {/* BLOG READ PAGE */}
+            <Route
+              path="/blog/read"
+              element={
+                <BlogReadMore
+                  post={selectedPost}
+                />
+              }
+            />
+          </Routes>
+
+          <Footer />
         </>
-    );
+      )}
+    </>
+  );
 }

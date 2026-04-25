@@ -14,7 +14,7 @@ export default function Hero() {
           className="text-center mb-12"
         >
           <span className="text-xs text-red-600 bg-white rounded-full px-6 py-2">
-            Camphix Enterprise
+            Camphix Company
           </span>
 
           <h1 className="text-4xl md:text-5xl font-semibold text-zinc-900 mt-6">

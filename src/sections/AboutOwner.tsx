@@ -24,7 +24,7 @@ export default function AboutOwner() {
             </h2>
 
             <p className="text-sm text-zinc-600 leading-7 mb-4 text-justify">
-              Camphix Enterprise began with a vision to redefine construction,
+              Camphix Company began with a vision to redefine construction,
               engineering, and digital solutions across Africa. Founded by a
               passionate civil engineer with a strong background in both
               infrastructure development and creative digital work, the journey
@@ -42,7 +42,7 @@ export default function AboutOwner() {
             </p>
 
             <p className="text-sm text-zinc-600 leading-7 text-justify">
-              Today, Camphix Enterprise has grown into a multi-disciplinary
+              Today, Camphix Company has grown into a multi-disciplinary
               company offering services in construction, civil engineering,
               architectural design, land surveying, real estate development, and
               digital solutions. The mission remains the same — to build with
@@ -65,7 +65,7 @@ export default function AboutOwner() {
             />
 
             <p className="text-xs text-zinc-500 mt-3 italic">
-              Joseph Mensah Sarbah — CEO, Camphix Websites
+              Joseph Mensah Sarbah — CEO, Camphix Company
             </p>
           </motion.div>
         </motion.div>

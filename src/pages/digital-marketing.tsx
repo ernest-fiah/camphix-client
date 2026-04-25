@@ -42,27 +42,27 @@ export default function DigitalMarketing() {
   },
   {
     title: "Digital Marketing",
-    image: "/assets/digitalmarketing/6.webp",
+    image: "/assets/digitalmarketing/1.webp",
     bg: "bg-[#2a2540]",
   },
   {
     title: "Digital Marketing",
-    image: "/assets/digitalmarketing/7.webp",
+    image: "/assets/digitalmarketing/2.webp",
     bg: "bg-[#00323f]",
   },
   {
     title: "Digital Marketing",
-    image: "/assets/digitalmarketing/8.webp",
+    image: "/assets/digitalmarketing/3.webp",
     bg: "bg-[#00365c]",
   },
   {
     title: "Digital Marketing",
-    image: "/assets/digitalmarketing/9.webp",
+    image: "/assets/digitalmarketing/4.webp",
     bg: "bg-[#374151]",
   },
   {
     title: "Digital Marketing",
-    image: "/assets/digitalmarketing/10.webp",
+    image: "/assets/digitalmarketing/5.webp",
     bg: "bg-[#5b4636]",
   },
 ];
@@ -175,7 +175,7 @@ export default function DigitalMarketing() {
 
             {/* TEXT */}
             <p className="mt-5 sm:mt-7 text-[0.97rem] sm:text-lg md:text-xl leading-7 sm:leading-9 md:leading-10 text-gray-700 text-justify">
-              Camphix Enterprise delivers
+              Camphix Company delivers
               result-driven digital marketing
               services that help brands grow
               online, increase visibility, and

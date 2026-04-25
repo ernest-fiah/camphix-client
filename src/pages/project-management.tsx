@@ -136,7 +136,7 @@ export default function ProjectManagement() {
 
             {/* TEXT */}
             <p className="mt-5 sm:mt-7 text-[0.97rem] sm:text-lg md:text-xl leading-7 sm:leading-9 md:leading-10 text-gray-700 text-justify">
-              Camphix Enterprise delivers professional project management
+              Camphix Company delivers professional project management
               solutions for residential, commercial, industrial and
               government developments. We coordinate planning,
               budgeting, scheduling, quality assurance and execution to

@@ -11,9 +11,9 @@ const Faqs = () => {
 
   const faqs: FAQ[] = [
     {
-      question: "What services does Camphix Enterprise provide?",
+      question: "What services does Camphix Company provide?",
       answer:
-        "Camphix Enterprise provides construction and civil engineering, land surveying, architectural design, real estate development, project management, and infrastructure solutions across Africa.",
+        "Camphix Company provides construction and civil engineering, land surveying, architectural design, real estate development, project management, and infrastructure solutions across Africa.",
     },
     {
       question: "Do you handle both residential and commercial projects?",

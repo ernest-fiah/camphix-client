@@ -364,6 +364,246 @@ const projects = [
     bg: "bg-amber-500",
     img: "assets/procurement-logistics/7.webp",
   },
+  {
+  category: "Videography & Media Production",
+  bg: "bg-amber-500",
+  img: "assets/videography/1.webp",
+},
+{
+  category: "Videography & Media Production",
+  bg: "bg-orange-500",
+  img: "assets/videography/2.webp",
+},
+{
+  category: "Videography & Media Production",
+  bg: "bg-yellow-500",
+  img: "assets/videography/3.webp",
+},
+{
+  category: "Videography & Media Production",
+  bg: "bg-rose-500",
+  img: "assets/videography/4.webp",
+},
+{
+  category: "Videography & Media Production",
+  bg: "bg-red-500",
+  img: "assets/videography/5.webp",
+},
+{
+  category: "Videography & Media Production",
+  bg: "bg-pink-500",
+  img: "assets/videography/6.webp",
+},
+{
+  category: "Graphic Design & Branding",
+  bg: "bg-cyan-500",
+  img: "assets/graphicdesign/1.webp",
+},
+{
+  category: "Graphic Design & Branding",
+  bg: "bg-sky-500",
+  img: "assets/graphicdesign/2.webp",
+},
+{
+  category: "Graphic Design & Branding",
+  bg: "bg-blue-500",
+  img: "assets/graphicdesign/3.webp",
+},
+{
+  category: "Graphic Design & Branding",
+  bg: "bg-indigo-500",
+  img: "assets/graphicdesign/4.webp",
+},
+{
+  category: "Graphic Design & Branding",
+  bg: "bg-violet-500",
+  img: "assets/graphicdesign/5.webp",
+},
+{
+  category: "Graphic Design & Branding",
+  bg: "bg-fuchsia-500",
+  img: "assets/graphicdesign/6.webp",
+},
+{
+  category: "Graphic Design & Branding",
+  bg: "bg-purple-500",
+  img: "assets/graphicdesign/7.webp",
+},
+{
+  category: "Website & UI/UX Design",
+  bg: "bg-emerald-500",
+  img: "/assets/uiuxdesign/1.webp",
+},
+{
+  category: "Website & UI/UX Design",
+  bg: "bg-green-500",
+  img: "/assets/uiuxdesign/2.webp",
+},
+{
+  category: "Website & UI/UX Design",
+  bg: "bg-lime-500",
+  img: "/assets/uiuxdesign/3.webp",
+},
+{
+  category: "Website & UI/UX Design",
+  bg: "bg-teal-500",
+  img: "/assets/uiuxdesign/4.webp",
+},
+{
+  category: "Website & UI/UX Design",
+  bg: "bg-cyan-400",
+  img: "/assets/uiuxdesign/5.webp",
+},
+{
+  category: "Printing & Production",
+  bg: "bg-stone-500",
+  img: "/assets/printingproduction/1.webp",
+},
+{
+  category: "Printing & Production",
+  bg: "bg-zinc-500",
+  img: "/assets/printingproduction/2.webp",
+},
+{
+  category: "Printing & Production",
+  bg: "bg-neutral-500",
+  img: "/assets/printingproduction/3.webp",
+},
+{
+  category: "Printing & Production",
+  bg: "bg-slate-500",
+  img: "/assets/printingproduction/4.webp",
+},
+{
+  category: "Printing & Production",
+  bg: "bg-gray-500",
+  img: "/assets/printingproduction/5.webp",
+},
+{
+  category: "Printing & Production",
+  bg: "bg-stone-600",
+  img: "/assets/printingproduction/6.webp",
+},
+{
+  category: "Printing & Production",
+  bg: "bg-zinc-600",
+  img: "/assets/printingproduction/7.webp",
+},
+{
+  category: "Printing & Production",
+  bg: "bg-neutral-600",
+  img: "/assets/printingproduction/8.webp",
+},
+{
+  category: "Digital Marketing",
+  bg: "bg-lime-500",
+  img: "/assets/digitalmarketing/1.webp",
+},
+{
+  category: "Digital Marketing",
+  bg: "bg-green-500",
+  img: "/assets/digitalmarketing/2.webp",
+},
+{
+  category: "Digital Marketing",
+  bg: "bg-emerald-500",
+  img: "/assets/digitalmarketing/3.webp",
+},
+{
+  category: "Digital Marketing",
+  bg: "bg-teal-500",
+  img: "/assets/digitalmarketing/4.webp",
+},
+{
+  category: "Digital Marketing",
+  bg: "bg-cyan-500",
+  img: "/assets/digitalmarketing/5.webp",
+},
+{
+  category: "Printing",
+  bg: "bg-indigo-500",
+  img: "/assets/printingproduction/8.webp",
+},
+{
+  category: "Printing",
+  bg: "bg-blue-500",
+  img: "/assets/printingproduction/7.webp",
+},
+{
+  category: "Printing",
+  bg: "bg-sky-500",
+  img: "/assets/printingproduction/6.webp",
+},
+{
+  category: "Printing",
+  bg: "bg-cyan-500",
+  img: "/assets/printingproduction/5.webp",
+},
+{
+  category: "Printing",
+  bg: "bg-teal-500",
+  img: "/assets/printingproduction/4.webp",
+},
+{
+  category: "Printing",
+  bg: "bg-green-500",
+  img: "/assets/printingproduction/3.webp",
+},
+{
+  category: "Printing",
+  bg: "bg-emerald-500",
+  img: "/assets/printingproduction/2.webp",
+},
+{
+  category: "Printing",
+  bg: "bg-lime-500",
+  img: "/assets/printingproduction/1.webp",
+},
+{
+  category: "Video Production",
+  bg: "bg-red-500",
+  img: "assets/videography/6.webp",
+},
+{
+  category: "Video Production",
+  bg: "bg-orange-500",
+  img: "assets/videography/5.webp",
+},
+{
+  category: "Video Production",
+  bg: "bg-yellow-500",
+  img: "assets/videography/4.webp",
+},
+{
+  category: "Video Production",
+  bg: "bg-amber-500",
+  img: "assets/videography/3.webp",
+},
+{
+  category: "Video Production",
+  bg: "bg-rose-500",
+  img: "assets/videography/2.webp",
+},
+{
+  category: "Video Production",
+  bg: "bg-pink-500",
+  img: "assets/videography/1.webp",
+},
+{
+  category: "Strategic Consultancy",
+  bg: "bg-violet-500",
+  img: "assets/strategic-consultancy/1.webp",
+},
+{
+  category: "Strategic Consultancy",
+  bg: "bg-purple-500",
+  img: "assets/strategic-consultancy/2.webp",
+},
+{
+  category: "Strategic Consultancy",
+  bg: "bg-fuchsia-500",
+  img: "assets/strategic-consultancy/3.webp",
+},
 ];
 
 export default function Portfolio() {

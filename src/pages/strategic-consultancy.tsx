@@ -17,52 +17,52 @@ export default function StrategicConsultancy() {
  const galleryItems = [
   {
     title: "Strategic Consultancy",
-    image: "/assets/strategicconsultancy/1.webp",
+    image: "/assets/strategic-consultancy/1.webp",
     bg: "bg-[#2a2540]",
   },
   {
     title: "Strategic Consultancy",
-    image: "/assets/strategicconsultancy/2.webp",
+    image: "/assets/strategic-consultancy/2.webp",
     bg: "bg-[#00323f]",
   },
   {
     title: "Strategic Consultancy",
-    image: "/assets/strategicconsultancy/3.webp",
+    image: "/assets/strategic-consultancy/3.webp",
     bg: "bg-[#00365c]",
   },
   {
     title: "Strategic Consultancy",
-    image: "/assets/strategicconsultancy/4.webp",
+    image: "/assets/strategic-consultancy/1.webp",
     bg: "bg-[#374151]",
   },
   {
     title: "Strategic Consultancy",
-    image: "/assets/strategicconsultancy/5.webp",
+    image: "/assets/strategic-consultancy/2.webp",
     bg: "bg-[#5b4636]",
   },
   {
     title: "Strategic Consultancy",
-    image: "/assets/strategicconsultancy/6.webp",
+    image: "/assets/strategic-consultancy/3.webp",
     bg: "bg-[#2a2540]",
   },
   {
     title: "Strategic Consultancy",
-    image: "/assets/strategicconsultancy/7.webp",
+    image: "/assets/strategic-consultancy/1.webp",
     bg: "bg-[#00323f]",
   },
   {
     title: "Strategic Consultancy",
-    image: "/assets/strategicconsultancy/8.webp",
+    image: "/assets/strategic-consultancy/2.webp",
     bg: "bg-[#00365c]",
   },
   {
     title: "Strategic Consultancy",
-    image: "/assets/strategicconsultancy/9.webp",
+    image: "/assets/strategic-consultancy/3.webp",
     bg: "bg-[#374151]",
   },
   {
     title: "Strategic Consultancy",
-    image: "/assets/strategicconsultancy/10.webp",
+    image: "/assets/strategic-consultancy/1.webp",
     bg: "bg-[#5b4636]",
   },
 ];
@@ -146,7 +146,7 @@ export default function StrategicConsultancy() {
 
             {/* TEXT */}
             <p className="mt-5 sm:mt-7 text-[0.97rem] sm:text-lg md:text-xl leading-7 sm:leading-9 md:leading-10 text-gray-700 text-justify">
-              Camphix Enterprise provides expert
+              Camphix Company provides expert
               strategic consultancy services that
               help businesses make informed
               decisions, optimize operations, and
@@ -201,7 +201,7 @@ export default function StrategicConsultancy() {
             {/* Main Card */}
             <div className="relative z-10 bg-[#374151] rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-5 shadow-2xl w-full max-w-xl mx-auto">
               <img
-                src="/assets/strategicconsultancy/1.webp"
+                src="/assets/strategic-consultancy/1.webp"
                 alt="Strategic Consultancy"
                 className="rounded-xl sm:rounded-2xl w-full h-[220px] sm:h-[320px] md:h-[380px] object-cover"
               />

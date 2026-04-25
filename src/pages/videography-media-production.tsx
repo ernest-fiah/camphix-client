@@ -15,57 +15,57 @@ export default function VideographyMediaProduction() {
   ];
 
   const galleryItems = [
-  {
-    title: "Videography & Media Production",
-    image: "/assets/videography/1.webp",
-    bg: "bg-[#2a2540]",
-  },
-  {
-    title: "Videography & Media Production",
-    image: "/assets/videography/2.webp",
-    bg: "bg-[#00323f]",
-  },
-  {
-    title: "Videography & Media Production",
-    image: "/assets/videography/3.webp",
-    bg: "bg-[#00365c]",
-  },
-  {
-    title: "Videography & Media Production",
-    image: "/assets/videography/4.webp",
-    bg: "bg-[#374151]",
-  },
-  {
-    title: "Videography & Media Production",
-    image: "/assets/videography/5.webp",
-    bg: "bg-[#5b4636]",
-  },
-  {
-    title: "Videography & Media Production",
-    image: "/assets/videography/6.webp",
-    bg: "bg-[#2a2540]",
-  },
-  {
-    title: "Videography & Media Production",
-    image: "/assets/videography/7.webp",
-    bg: "bg-[#00323f]",
-  },
-  {
-    title: "Videography & Media Production",
-    image: "/assets/videography/8.webp",
-    bg: "bg-[#00365c]",
-  },
-  {
-    title: "Videography & Media Production",
-    image: "/assets/videography/9.webp",
-    bg: "bg-[#374151]",
-  },
-  {
-    title: "Videography & Media Production",
-    image: "/assets/videography/10.webp",
-    bg: "bg-[#5b4636]",
-  },
-];
+    {
+      title: "Videography & Media Production",
+      image: "/assets/videography/1.webp",
+      bg: "bg-[#2a2540]",
+    },
+    {
+      title: "Videography & Media Production",
+      image: "/assets/videography/2.webp",
+      bg: "bg-[#00323f]",
+    },
+    {
+      title: "Videography & Media Production",
+      image: "/assets/videography/3.webp",
+      bg: "bg-[#00365c]",
+    },
+    {
+      title: "Videography & Media Production",
+      image: "/assets/videography/4.webp",
+      bg: "bg-[#374151]",
+    },
+    {
+      title: "Videography & Media Production",
+      image: "/assets/videography/5.webp",
+      bg: "bg-[#5b4636]",
+    },
+    {
+      title: "Videography & Media Production",
+      image: "/assets/videography/6.webp",
+      bg: "bg-[#2a2540]",
+    },
+    {
+      title: "Videography & Media Production",
+      image: "/assets/videography/1.webp",
+      bg: "bg-[#00323f]",
+    },
+    {
+      title: "Videography & Media Production",
+      image: "/assets/videography/2.webp",
+      bg: "bg-[#00365c]",
+    },
+    {
+      title: "Videography & Media Production",
+      image: "/assets/videography/3.webp",
+      bg: "bg-[#374151]",
+    },
+    {
+      title: "Videography & Media Production",
+      image: "/assets/videography/4.webp",
+      bg: "bg-[#5b4636]",
+    },
+  ];
 
   const [activeCategory, setActiveCategory] = useState(
     "Videography & Media Production"
@@ -175,7 +175,7 @@ export default function VideographyMediaProduction() {
 
             {/* TEXT */}
             <p className="mt-5 sm:mt-7 text-[0.97rem] sm:text-lg md:text-xl leading-7 sm:leading-9 md:leading-10 text-gray-700 text-justify">
-              Camphix Enterprise delivers
+              Camphix Company delivers
               high-quality videography and media
               production services for brands,
               businesses, events and campaigns.
@@ -186,7 +186,7 @@ export default function VideographyMediaProduction() {
               drives results.
             </p>
 
-             {/* BUTTON */}
+            {/* BUTTON */}
             <div className="mt-8">
               <motion.a
                 href="tel:+233541728294"
@@ -202,10 +202,8 @@ export default function VideographyMediaProduction() {
                 whileTap={{ scale: 0.96 }}
                 className="group relative w-full sm:w-auto inline-flex justify-center items-center gap-3 px-6 sm:px-10 py-4 rounded-full bg-yellow-400 text-black font-semibold overflow-hidden transition"
               >
-                {/* Shine Effect */}
                 <span className="absolute inset-0 bg-white/30 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 skew-x-12"></span>
 
-                {/* Pulse Ring */}
                 <span className="absolute inset-0 rounded-full border border-yellow-300 animate-ping opacity-20"></span>
 
                 <span className="relative z-10">BOOK A CALL</span>
@@ -233,12 +231,10 @@ export default function VideographyMediaProduction() {
             }}
             className="relative w-full"
           >
-            {/* Background Shape */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-[220px] h-[220px] sm:w-[320px] sm:h-[320px] md:w-[420px] md:h-[420px] lg:w-[500px] lg:h-[500px] border-[20px] sm:border-[28px] md:border-[35px] lg:border-[40px] border-yellow-200 rounded-[60px] sm:rounded-[90px] rotate-45 opacity-60"></div>
             </div>
 
-            {/* Main Card */}
             <div className="relative z-10 bg-[#374151] rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-5 shadow-2xl w-full max-w-xl mx-auto">
               <img
                 src="/assets/videography/1.webp"
@@ -247,7 +243,6 @@ export default function VideographyMediaProduction() {
               />
             </div>
 
-            {/* Floating Card */}
             <motion.div
               animate={{
                 y: [0, -8, 0],
@@ -276,7 +271,6 @@ export default function VideographyMediaProduction() {
 
       {/* BENEFITS SECTION */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 pb-14 sm:pb-20 md:pb-24 lg:pb-28">
-        {/* TITLE */}
         <motion.div
           initial={{
             opacity: 0,
@@ -372,7 +366,6 @@ export default function VideographyMediaProduction() {
 
         {/* GALLERY SECTION */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 pb-20">
-          {/* TITLE */}
           <motion.div
             initial={{
               opacity: 0,
@@ -424,7 +417,6 @@ export default function VideographyMediaProduction() {
 
           {/* SLIDER */}
           <div className="relative">
-            {/* CARDS */}
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
               {visibleCards.map(
                 (item, index) => (
@@ -465,7 +457,6 @@ export default function VideographyMediaProduction() {
               )}
             </div>
 
-            {/* LEFT BUTTON */}
             <motion.button
               whileHover={{
                 scale: 1.08,
@@ -479,7 +470,6 @@ export default function VideographyMediaProduction() {
               <ChevronLeft className="w-5 h-5" />
             </motion.button>
 
-            {/* RIGHT BUTTON */}
             <motion.button
               whileHover={{
                 scale: 1.08,
@@ -493,7 +483,6 @@ export default function VideographyMediaProduction() {
               <ChevronRight className="w-5 h-5" />
             </motion.button>
 
-            {/* DOTS */}
             <div className="flex justify-center gap-5 mt-14">
               {galleryItems.map(
                 (_, index) => (

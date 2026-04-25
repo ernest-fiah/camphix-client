@@ -10,12 +10,16 @@ export default function Form() {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     setShow(true);
   }, []);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     setFormData({
       ...formData,
@@ -23,17 +27,43 @@ export default function Form() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    console.log("FORM SUBMITTED:", formData);
+    setLoading(true);
 
-    setFormData({
-      name: "",
-      email: "",
-      service: "Construction & Civil Engineering",
-      message: "",
-    });
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/camphixcompany@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(formData),
+        },
+      );
+
+      const result = await response.json();
+
+      if (result.success === "true" || response.ok) {
+        alert("Form submitted successfully. We have received your request.");
+
+        setFormData({
+          name: "",
+          email: "",
+          service: "Construction & Civil Engineering",
+          message: "",
+        });
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("Network error. Please try again.");
+    }
+
+    setLoading(false);
   };
 
   return (
@@ -62,7 +92,6 @@ export default function Form() {
           show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        
         {/* MAIN SOFT GRAY GLOW */}
         <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none size-140 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-300 opacity-40 rounded-full blur-[200px] glow-anim"></div>
 
@@ -79,17 +108,17 @@ export default function Form() {
             <div className="flex items-center">
               <img
                 className="size-7 rounded-full border border-gray-400"
-                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=50"
+                src="/assets/testimonial/6.webp"
                 alt="user1"
               />
               <img
                 className="size-7 rounded-full border border-gray-500 -translate-x-2"
-                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=50"
+                src="/assets/testimonial/7.webp"
                 alt="user2"
               />
               <img
                 className="size-7 rounded-full border border-gray-300 -translate-x-4"
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=50"
+                src="/assets/testimonial/4.webp"
                 alt="user3"
               />
             </div>
@@ -108,7 +137,7 @@ export default function Form() {
 
           <p className="text-sm/6 text-gray-600 max-w-[345px] mt-4 mx-auto md:mx-0">
             From construction and land surveying to digital solutions, Camphix
-            Enterprise delivers precision, innovation, and reliability. Tell us
+            Company delivers precision, innovation, and reliability. Tell us
             about your project and let’s bring it to life.
           </p>
         </div>
@@ -119,9 +148,7 @@ export default function Form() {
             show ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
           }`}
         >
-          
           <form onSubmit={handleSubmit} className="space-y-6">
-
             {/* NAME */}
             <div className="transform transition hover:scale-[1.01]">
               <label className="block text-gray-900 text-sm mb-2">
@@ -170,7 +197,15 @@ export default function Form() {
                 <option>Architectural Design</option>
                 <option>Real Estate Development</option>
                 <option>Project Management</option>
-                <option>Digital Services</option>
+                <option>Building Materials Supply</option>
+                <option>Electrical & Mechanical Works</option>
+                <option>Graphic Design & Branding</option>
+                <option>Videography & Media Production</option>
+                <option>Digital Marketing</option>
+                <option>Website & UI/UX Design</option>
+                <option>Printing & Production</option>
+                <option>Procurement & Logistics</option>
+                <option>Strategic Consultancy</option>
               </select>
             </div>
 
@@ -200,15 +235,14 @@ export default function Form() {
 
               <button
                 type="submit"
-                className="bg-linear-to-r from-[#111111] via-[#6b7280] to-[#d1d5db] hover:scale-105 active:scale-95 text-white font-medium text-sm px-8 md:px-16 py-3 rounded-full transition duration-300 cursor-pointer"
+                disabled={loading}
+                className="bg-linear-to-r from-[#111111] via-[#6b7280] to-[#d1d5db] hover:scale-105 active:scale-95 text-white font-medium text-sm px-8 md:px-16 py-3 rounded-full transition duration-300 cursor-pointer disabled:opacity-60"
               >
-                Submit
+                {loading ? "Sending..." : "Submit"}
               </button>
             </div>
-
           </form>
         </div>
-
       </section>
     </>
   );

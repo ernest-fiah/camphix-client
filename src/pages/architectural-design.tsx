@@ -139,7 +139,7 @@ export default function ArchitecturalDesign() {
 
             {/* TEXT */}
             <p className="mt-5 sm:mt-7 text-[0.97rem] sm:text-lg md:text-xl leading-7 sm:leading-9 md:leading-10 text-gray-700 text-justify">
-              Camphix Enterprise delivers innovative architectural design
+              Camphix Company delivers innovative architectural design
               solutions for residential, commercial, industrial and public
               developments. We combine creativity, functionality and technical
               expertise to create modern spaces that are efficient, elegant and

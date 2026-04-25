@@ -606,7 +606,9 @@ export default function Navbar() {
                 {[
                   { name: "Projects", icon: ClipboardList, to: "/projects" },
                   { name: "About", icon: Lightbulb, to: "/about" },
+                  { name: "Blog", icon: Printer, to: "/blog" },
                   { name: "Contact", icon: MapPin, to: "/contact" },
+                  
                 ].map((item, i) => (
                   <motion.div
                     key={item.name}

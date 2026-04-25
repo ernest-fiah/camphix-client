@@ -136,7 +136,7 @@ export default function BuildingMaterialsSupply() {
 
             {/* TEXT */}
             <p className="mt-5 sm:mt-7 text-[0.97rem] sm:text-lg md:text-xl leading-7 sm:leading-9 md:leading-10 text-gray-700 text-justify">
-              Camphix Enterprise supplies high-quality building materials
+              Camphix Company supplies high-quality building materials
               for residential, commercial, industrial and government
               projects. We provide reliable sourcing, timely delivery and
               durable products that support efficient construction and

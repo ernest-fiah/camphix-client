@@ -136,7 +136,7 @@ export default function RealEstateDevelopment() {
 
             {/* TEXT */}
             <p className="mt-5 sm:mt-7 text-[0.97rem] sm:text-lg md:text-xl leading-7 sm:leading-9 md:leading-10 text-gray-700 text-justify">
-              Camphix Enterprise delivers premium real estate development
+              Camphix Company delivers premium real estate development
               solutions for residential, commercial and mixed-use projects. We
               combine market insight, quality construction and strategic
               planning to create profitable properties and sustainable

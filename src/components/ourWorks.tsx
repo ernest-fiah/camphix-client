@@ -1,12 +1,12 @@
 import { ArrowRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-const categories = ["All", "Construction", "Flyers"];
+const categories = ["Construction", "Flyers"];
 
 export default function OurWorks() {
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const [startAnimation, setStartAnimation] = useState(false);
-  const [active, setActive] = useState("All");
+  const [active, setActive] = useState("Construction");
 
   const works = [
     // =========================
@@ -82,10 +82,7 @@ export default function OurWorks() {
   // =========================
   // FILTERED DATA
   // =========================
-  const filtered =
-    active === "All"
-      ? works
-      : works.filter((item) => item.category === active);
+  const filtered = works.filter((item) => item.category === active);
 
   return (
     <div

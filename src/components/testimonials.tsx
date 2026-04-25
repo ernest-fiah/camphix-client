@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 const testimonials = [
   {
-    text: "Camphix Enterprise delivered outstanding results—our project execution became faster and more efficient.",
+    text: "Camphix Company delivered outstanding results—our project execution became faster and more efficient.",
     name: "Kwame Mensah",
     role: "Project Director, BuildCore",
     img: "/assets/testimonial/1.webp",
@@ -27,7 +27,7 @@ const testimonials = [
   },
   {
     text: "Reliable execution and smooth collaboration throughout the entire project lifecycle.",
-    name: "Macheal Essuman_CEO. of Micky Build Company Limited",
+    name: "Macheal Essuman",
     role: "CEO. of Micky Build Company Limited",
     img: "/assets/testimonial/4.webp",
   },

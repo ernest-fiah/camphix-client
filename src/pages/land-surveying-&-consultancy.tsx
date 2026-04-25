@@ -134,7 +134,7 @@ export default function LandSurveyingConsultancy() {
             </h1>
 
             <p className="mt-5 sm:mt-7 text-[0.97rem] sm:text-lg md:text-xl leading-7 sm:leading-9 md:leading-10 text-gray-700 text-justify">
-              Camphix Enterprise provides accurate land surveying and
+              Camphix Company provides accurate land surveying and
               professional consultancy services for residential, commercial,
               industrial and government developments. We combine modern survey
               equipment, mapping technology and expert advisory services to help

@@ -128,7 +128,7 @@ const galleryItems = [
 
             {/* TEXT */}
             <p className="mt-6 text-base sm:text-lg md:text-xl leading-8 text-gray-700">
-              Camphix Enterprise delivers premium construction and civil
+              Camphix Company delivers premium construction and civil
               engineering services for residential, commercial and industrial
               developments. We combine innovation, quality craftsmanship and
               expert execution to build infrastructure that stands the test of

@@ -32,7 +32,7 @@ const App = () => {
             </h1>
 
             <p className="text-sm text-neutral-600 max-w-md mx-auto mb-8">
-              Camphix Enterprise was founded with a vision to deliver excellence
+              Camphix Company was founded with a vision to deliver excellence
               in construction, engineering, and digital solutions. From small
               beginnings to impactful projects, we continue to build with
               precision, innovation, and a commitment to quality.

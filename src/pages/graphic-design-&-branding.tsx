@@ -46,17 +46,17 @@ export default function GraphicDesignBranding() {
   },
   {
     title: "Graphic Design & Branding",
-    image: "/assets/graphicdesign/8.webp",
+    image: "/assets/graphicdesign/1.webp",
     bg: "bg-[#00365c]",
   },
   {
     title: "Graphic Design & Branding",
-    image: "/assets/graphicdesign/9.webp",
+    image: "/assets/graphicdesign/2.webp",
     bg: "bg-[#374151]",
   },
   {
     title: "Graphic Design & Branding",
-    image: "/assets/graphicdesign/10.webp",
+    image: "/assets/graphicdesign/3.webp",
     bg: "bg-[#5b4636]",
   },
 ];
@@ -133,7 +133,7 @@ export default function GraphicDesignBranding() {
 
             {/* TEXT */}
             <p className="mt-5 sm:mt-7 text-[0.97rem] sm:text-lg md:text-xl leading-7 sm:leading-9 md:leading-10 text-gray-700 text-justify">
-              Camphix Enterprise delivers creative graphic design and branding
+              Camphix Company delivers creative graphic design and branding
               solutions that help businesses stand out, build trust and connect
               with their audience. From logos to full brand identity systems,
               we combine strategy, creativity and market relevance to create

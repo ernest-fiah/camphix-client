@@ -57,12 +57,12 @@ export default function PrintingProduction() {
   },
   {
     title: "Printing & Production",
-    image: "/assets/printingproduction/9.webp",
+    image: "/assets/printingproduction/1.webp",
     bg: "bg-[#374151]",
   },
   {
     title: "Printing & Production",
-    image: "/assets/printingproduction/10.webp",
+    image: "/assets/printingproduction/2.webp",
     bg: "bg-[#5b4636]",
   },
 ];
@@ -174,7 +174,7 @@ export default function PrintingProduction() {
 
             {/* TEXT */}
             <p className="mt-5 sm:mt-7 text-[0.97rem] sm:text-lg md:text-xl leading-7 sm:leading-9 md:leading-10 text-gray-700 text-justify">
-              Camphix Enterprise provides
+              Camphix Company provides
               high-quality printing and production
               services that bring your brand to
               life. From corporate branding
@@ -240,7 +240,7 @@ export default function PrintingProduction() {
             {/* Main Card */}
             <div className="relative z-10 bg-[#374151] rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-5 shadow-2xl w-full max-w-xl mx-auto">
               <img
-                src="/assets/printingproduction/hero.webp"
+                src="/assets/printingproduction/1.webp"
                 alt="Printing & Production"
                 className="rounded-xl sm:rounded-2xl w-full h-[220px] sm:h-[320px] md:h-[380px] object-cover"
               />
