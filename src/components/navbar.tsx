@@ -24,6 +24,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import type { LucideIcon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { BookOpen } from "lucide-react";
 
 interface NavLink {
   name: string;
@@ -606,7 +607,7 @@ export default function Navbar() {
                 {[
                   { name: "Projects", icon: ClipboardList, to: "/projects" },
                   { name: "About", icon: Lightbulb, to: "/about" },
-                  { name: "Blog", icon: Printer, to: "/blog" },
+                  { name: "Blog", icon: BookOpen, to: "/blog" },
                   { name: "Contact", icon: MapPin, to: "/contact" },
                   
                 ].map((item, i) => (
