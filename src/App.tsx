@@ -54,10 +54,10 @@ export default function App() {
       {/* MAIN APP */}
       {!loading && (
         <>
+          <CookieBanner />
           <Navbar />
           <MobileNavbar />
           <ScrollToTop />
-          <CookieBanner />
 
           <Routes>
             <Route path="/" element={<Home />} />
@@ -88,10 +88,7 @@ export default function App() {
               element={<RealEstateDevelopment />}
             />
 
-            <Route
-              path="/project-management"
-              element={<ProjectManagement />}
-            />
+            <Route path="/project-management" element={<ProjectManagement />} />
 
             <Route
               path="/building-materials-supply"
@@ -113,15 +110,9 @@ export default function App() {
               element={<VideographyMediaProduction />}
             />
 
-            <Route
-              path="/digital-marketing"
-              element={<DigitalMarketing />}
-            />
+            <Route path="/digital-marketing" element={<DigitalMarketing />} />
 
-            <Route
-              path="/web-uiux"
-              element={<WebsiteUIUXDesign />}
-            />
+            <Route path="/web-uiux" element={<WebsiteUIUXDesign />} />
 
             <Route
               path="/printing-production"
@@ -141,21 +132,13 @@ export default function App() {
             {/* BLOG PAGE */}
             <Route
               path="/blog"
-              element={
-                <BlogPage
-                  setSelectedPost={setSelectedPost}
-                />
-              }
+              element={<BlogPage setSelectedPost={setSelectedPost} />}
             />
 
             {/* BLOG READ PAGE */}
             <Route
               path="/blog/read"
-              element={
-                <BlogReadMore
-                  post={selectedPost}
-                />
-              }
+              element={<BlogReadMore post={selectedPost} />}
             />
           </Routes>
 

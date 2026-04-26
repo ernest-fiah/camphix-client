@@ -75,7 +75,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-black pt-15 px-4 sm:px-6 md:px-8 lg:px-20 border-t-[8px] border-b-[8px] border-red-600 shadow-[0_-5px_20px_rgba(255,0,0,0.4),0_5px_20px_rgba(255,0,0,0.4)]">
+    <footer className="bg-black pt-15 px-4 sm:px-6 md:px-8 lg:px-20 border-t-[8px] border-b-[75px] md:border-t-[8px] md:border-b-[8px] border-red-600 shadow-[0_-5px_20px_rgba(255,0,0,0.4),0_5px_20px_rgba(255,0,0,0.4)]">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-16 pb-12">
 
