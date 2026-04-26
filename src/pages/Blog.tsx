@@ -9,11 +9,7 @@ type BlogPost = {
   excerpt: string;
 };
 
-type Props = {
-  setSelectedPost: (post: BlogPost) => void;
-};
-
-export default function BlogPage({ setSelectedPost }: Props) {
+export default function BlogPage() {
   const navigate = useNavigate();
 
   const [active, setActive] = useState("All");
@@ -66,24 +62,19 @@ export default function BlogPage({ setSelectedPost }: Props) {
   ];
 
   const filtered =
-    active === "All"
-      ? posts
-      : posts.filter((p) => p.category === active);
+    active === "All" ? posts : posts.filter((p) => p.category === active);
 
   const featured = posts[0];
 
   const openPost = (post: BlogPost) => {
-    setSelectedPost(post);
-    navigate("/blog/read");
+    navigate("/blog/read", { state: post });
   };
 
   return (
     <div className="bg-white text-black">
-
       {/* ================= HERO ================= */}
       <section className="border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6 py-20 text-center">
-
           <p className="text-sm tracking-[0.3em] text-gray-500 uppercase">
             Camphix Insights
           </p>
@@ -96,15 +87,12 @@ export default function BlogPage({ setSelectedPost }: Props) {
             A curated space where construction, engineering, and design meet
             innovation and real-world execution.
           </p>
-
         </div>
       </section>
 
       {/* ================= FEATURED ================= */}
       <section className="max-w-6xl mx-auto px-6 py-16">
-
         <div className="grid md:grid-cols-2 gap-10 items-center">
-
           <img
             src={featured.img}
             className="w-full h-[450px] object-cover grayscale hover:grayscale-0 transition duration-500"
@@ -131,7 +119,6 @@ export default function BlogPage({ setSelectedPost }: Props) {
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
-
         </div>
       </section>
 
@@ -154,20 +141,16 @@ export default function BlogPage({ setSelectedPost }: Props) {
 
       {/* ================= BLOG GRID ================= */}
       <section className="max-w-6xl mx-auto px-6 py-16 grid lg:grid-cols-4 gap-10">
-
         {/* POSTS */}
         <div className="lg:col-span-3">
-
           <h3 className="text-lg font-semibold mb-6">Latest Articles</h3>
 
           <div className="columns-1 md:columns-2 gap-6 space-y-6">
-
             {filtered.map((post, i) => (
               <div
                 key={i}
                 className="break-inside-avoid border border-gray-200 hover:border-black transition group bg-white"
               >
-
                 <div className="overflow-hidden">
                   <img
                     src={post.img}
@@ -184,9 +167,7 @@ export default function BlogPage({ setSelectedPost }: Props) {
                     {post.title}
                   </h4>
 
-                  <p className="mt-2 text-sm text-gray-600">
-                    {post.excerpt}
-                  </p>
+                  <p className="mt-2 text-sm text-gray-600">{post.excerpt}</p>
 
                   <button
                     onClick={() => openPost(post)}
@@ -195,18 +176,14 @@ export default function BlogPage({ setSelectedPost }: Props) {
                     Read More <ArrowRight className="w-3 h-3" />
                   </button>
                 </div>
-
               </div>
             ))}
-
           </div>
         </div>
 
         {/* SIDEBAR */}
         <aside className="lg:col-span-1 space-y-10">
-
           <div className="sticky top-10">
-
             <div>
               <h4 className="font-semibold mb-3">Categories</h4>
               <div className="space-y-2 text-sm text-gray-600">
@@ -226,7 +203,6 @@ export default function BlogPage({ setSelectedPost }: Props) {
               <h4 className="font-semibold mb-3">Trending</h4>
 
               <div className="space-y-4">
-
                 {posts.slice(0, 3).map((p, i) => (
                   <div
                     key={i}
@@ -249,16 +225,11 @@ export default function BlogPage({ setSelectedPost }: Props) {
                     </div>
                   </div>
                 ))}
-
               </div>
             </div>
-
           </div>
-
         </aside>
-
       </section>
-
     </div>
   );
 }

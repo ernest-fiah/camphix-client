@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 type BlogPost = {
   title: string;
@@ -9,12 +9,12 @@ type BlogPost = {
   excerpt: string;
 };
 
-type Props = {
-  post?: BlogPost | null;
-};
-
-export default function BlogReadMore({ post }: Props) {
+export default function BlogReadMore() {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // ✅ GET POST FROM NAVIGATION STATE
+  const post = location.state as BlogPost | null;
 
   const [animateIn, setAnimateIn] = useState(false);
 
@@ -47,6 +47,7 @@ export default function BlogReadMore({ post }: Props) {
     },
   ];
 
+  // ❌ SAFETY CHECK
   if (!post) {
     return (
       <div className="min-h-screen bg-white text-black flex items-center justify-center px-6">
@@ -54,7 +55,7 @@ export default function BlogReadMore({ post }: Props) {
           <h2 className="text-2xl font-semibold">No article found</h2>
 
           <p className="mt-3 text-gray-600">
-            The article you are trying to view is unavailable or was not selected.
+            The article you are trying to view is unavailable or you opened this page directly without selecting a blog post.
           </p>
 
           <button
@@ -142,63 +143,16 @@ export default function BlogReadMore({ post }: Props) {
 
         <div className="space-y-8 text-gray-700 leading-8 text-lg">
 
-          <p
-            className={`transition-all duration-700 delay-200 ${
-              animateIn
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-6"
-            }`}
-          >
-            The future of construction and engineering continues to evolve
-            through smarter execution systems, digital planning tools,
-            sustainable materials, and innovative project strategies.
-          </p>
+          <p>The future of construction and engineering continues to evolve...</p>
+          <p>Across emerging markets and developed cities alike...</p>
+          <p>Strong engineering leadership and design systems matter...</p>
 
-          <p
-            className={`transition-all duration-700 delay-300 ${
-              animateIn
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-6"
-            }`}
-          >
-            Across emerging markets and developed cities alike, companies
-            are adopting better methods to reduce waste, improve speed,
-            and maximize long-term structural value.
-          </p>
-
-          <p
-            className={`transition-all duration-700 delay-500 ${
-              animateIn
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-6"
-            }`}
-          >
-            Strong engineering leadership, quality design systems, and
-            disciplined project management now determine which firms lead
-            the next generation of infrastructure growth.
-          </p>
-
-          <blockquote
-            className={`border-l-4 border-black pl-6 italic text-black text-2xl leading-relaxed transition-all duration-700 delay-700 ${
-              animateIn
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-6"
-            }`}
-          >
-            Great projects are no longer built by effort alone —
-            they are built through systems, strategy, and precision.
+          <blockquote className="border-l-4 border-black pl-6 italic text-black text-2xl leading-relaxed">
+            Great projects are built through systems, strategy, and precision.
           </blockquote>
 
-          <p
-            className={`transition-all duration-700 delay-900 ${
-              animateIn
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-6"
-            }`}
-          >
-            Businesses that combine architecture, engineering, branding,
-            logistics, and digital execution into one ecosystem will shape
-            tomorrow’s industry standards.
+          <p>
+            Businesses combining architecture, engineering, branding, and digital execution will lead the future.
           </p>
 
         </div>
@@ -210,11 +164,7 @@ export default function BlogReadMore({ post }: Props) {
 
         <div className="max-w-6xl mx-auto px-6 py-16">
 
-          <h3
-            className={`text-2xl font-semibold mb-8 transition-all duration-700 ${
-              animateIn ? "opacity-100" : "opacity-0"
-            }`}
-          >
+          <h3 className={`text-2xl font-semibold mb-8 ${animateIn ? "opacity-100" : "opacity-0"}`}>
             Related Articles
           </h3>
 
@@ -224,16 +174,12 @@ export default function BlogReadMore({ post }: Props) {
               <div
                 key={i}
                 className={`group border border-gray-200 hover:border-black transition-all duration-700 bg-white ${
-                  animateIn
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-10"
+                  animateIn ? "opacity-100" : "opacity-0"
                 }`}
-                style={{ transitionDelay: `${i * 150}ms` }}
               >
                 <div className="overflow-hidden">
                   <img
                     src={item.img}
-                    alt={item.title}
                     className="w-full h-52 object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700"
                   />
                 </div>
@@ -244,7 +190,7 @@ export default function BlogReadMore({ post }: Props) {
                     {item.category}
                   </span>
 
-                  <h4 className="mt-3 font-semibold text-lg leading-snug group-hover:underline">
+                  <h4 className="mt-3 font-semibold text-lg group-hover:underline">
                     {item.title}
                   </h4>
 

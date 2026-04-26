@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 import Home from "./pages/home";
 import Navbar from "./components/navbar";
@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import MobileNavbar from "./components/MobileNavbar";
 
 import ScrollToTop from "./components/ScrollToTop";
+
 import ConstructionCivilEngineering from "./pages/construction-&-civil-engineering";
 import LandSurveyingConsultancy from "./pages/land-surveying-&-consultancy";
 import ArchitecturalDesign from "./pages/architectural-design";
@@ -26,25 +27,28 @@ import WebsiteUIUXDesign from "./pages/web-uiux";
 import PrintingProduction from "./pages/printing-production";
 import ProcurementLogistics from "./pages/procurement-logistics";
 import StrategicConsultancy from "./pages/strategic-consultancy";
+import VideographyMediaProduction from "./pages/videography-media-production";
 
 import BlogPage from "./pages/Blog";
 import BlogReadMore from "./pages/BlogReadMore";
 
 import SplashScreen from "./components/SplashScreen";
-import VideographyMediaProduction from "./pages/videography-media-production";
 import CookieBanner from "./components/Cookies";
-
-type BlogPost = {
-  title: string;
-  category: string;
-  img: string;
-  excerpt: string;
-};
 
 export default function App() {
   const [loading, setLoading] = useState(true);
+  const location = useLocation();
 
-  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
+  // ✅ Splash runs EVERY time user changes page
+  useEffect(() => {
+    setLoading(true);
+
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 800); // adjust speed here
+
+    return () => clearTimeout(timer);
+  }, [location.pathname]);
 
   return (
     <>
@@ -54,8 +58,8 @@ export default function App() {
       {/* MAIN APP */}
       {!loading && (
         <>
-          <CookieBanner />
           <Navbar />
+          <CookieBanner />
           <MobileNavbar />
           <ScrollToTop />
 
@@ -111,35 +115,14 @@ export default function App() {
             />
 
             <Route path="/digital-marketing" element={<DigitalMarketing />} />
-
             <Route path="/web-uiux" element={<WebsiteUIUXDesign />} />
+            <Route path="/printing-production" element={<PrintingProduction />} />
+            <Route path="/procurement-logistics" element={<ProcurementLogistics />} />
+            <Route path="/strategic-consultancy" element={<StrategicConsultancy />} />
 
-            <Route
-              path="/printing-production"
-              element={<PrintingProduction />}
-            />
-
-            <Route
-              path="/procurement-logistics"
-              element={<ProcurementLogistics />}
-            />
-
-            <Route
-              path="/strategic-consultancy"
-              element={<StrategicConsultancy />}
-            />
-
-            {/* BLOG PAGE */}
-            <Route
-              path="/blog"
-              element={<BlogPage setSelectedPost={setSelectedPost} />}
-            />
-
-            {/* BLOG READ PAGE */}
-            <Route
-              path="/blog/read"
-              element={<BlogReadMore post={selectedPost} />}
-            />
+            {/* BLOG */}
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/read" element={<BlogReadMore />} />
           </Routes>
 
           <Footer />
