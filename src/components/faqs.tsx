@@ -26,7 +26,7 @@ const Faqs = () => {
         "Yes, we provide professional architectural design, structural engineering support, and land surveying consultancy services tailored to project requirements.",
     },
     {
-      question: "Can Camphix Enterprise manage full construction projects?",
+      question: "Can Camphix Company manage full construction projects?",
       answer:
         "Yes, we offer end-to-end project management, including planning, procurement, site supervision, and construction execution.",
     },

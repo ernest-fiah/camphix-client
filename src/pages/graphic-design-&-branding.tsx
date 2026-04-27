@@ -1,6 +1,7 @@
 import  { useState, useEffect } from "react";
 import { ArrowRight, ChevronRight, ChevronLeft } from "lucide-react";
 import { motion } from "framer-motion";
+import Works from "../components/Works";
 
 export default function GraphicDesignBranding() {
   /* ===========================
@@ -91,6 +92,7 @@ export default function GraphicDesignBranding() {
   ];
 
   return (
+    <>
     <section
       className="w-full bg-[#f5f1e8] text-[#111827] overflow-hidden font-sans"
       style={{
@@ -403,5 +405,8 @@ export default function GraphicDesignBranding() {
 
       </div>
     </section>
+
+    <Works />
+    </>
   );
 }

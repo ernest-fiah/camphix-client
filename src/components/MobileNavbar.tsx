@@ -137,6 +137,11 @@ export default function MobileNavbar() {
       href: "/graphic-design-&-branding",
     },
     {
+      title: "Website & UI/UX Design",
+      icon: Globe,
+      href: "/web-uiux",
+    },
+    {
       title: "Building & Construction Portfolio",
       icon: Building2,
       href: "/construction-&-civil-engineering",
