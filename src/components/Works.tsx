@@ -5,6 +5,9 @@ export default function Works() {
   const [startAnimation, setStartAnimation] = useState(false);
 
   const works = [
+    { img: "/assets/camphix-flyers/37.webp" },
+    { img: "/assets/camphix-flyers/39.webp" },
+    { img: "/assets/camphix-flyers/40.webp" },
     { img: "/assets/camphix-flyers/12.webp" },
     { img: "/assets/camphix-flyers/14.webp" },
     { img: "/assets/camphix-flyers/15.webp" },
