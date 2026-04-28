@@ -222,43 +222,42 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        {/* BOTTOM */}
-        <motion.div className="flex flex-col md:flex-row justify-between items-center gap-4 py-4 border-t border-zinc-800">
-          <p className="text-sm text-zinc-500">
-            &copy; {new Date().getFullYear()} Camphix Company. All Rights
-            Reserved.
-          </p>
+       {/* BOTTOM */}
+<motion.div className="w-fixed flex flex-col md:flex-row justify-between items-center gap-4 py-4 px-4 md:px-6 bg-red-600 border-t border-red-700 shadow-[0_-5px_20px_rgba(255,0,0,0.4),0_5px_20px_rgba(255,0,0,0.4)">
+  <p className="text-sm text-black">
+    &copy; {new Date().getFullYear()} Camphix Company. All Rights Reserved.
+  </p>
 
-          <div className="flex flex-wrap justify-center gap-5 md:gap-9">
-            <a
-              href="/contact"
-              className="text-sm text-zinc-400 hover:text-white transition-colors"
-            >
-              Privacy Policy
-            </a>
+  <div className="flex flex-wrap justify-center gap-5 md:gap-9">
+    <a
+      href="/policy"
+      className="text-sm text-black-100 hover:text-black transition-colors"
+    >
+      Privacy Policy
+    </a>
 
-            <a
-              href="/contact"
-              className="text-sm text-zinc-400 hover:text-white transition-colors"
-            >
-              Terms of Service
-            </a>
+    <a
+      href="/terms"
+      className="text-sm text-black-100 hover:text-black transition-colors"
+    >
+      Terms of Service
+    </a>
 
-            <a
-              href="/about"
-              className="text-sm text-zinc-400 hover:text-white transition-colors"
-            >
-              About Us
-            </a>
+    <a
+      href="/about"
+      className="text-sm text-black-100 hover:text-black transition-colors"
+    >
+      About Us
+    </a>
 
-            <a
-              href="/projects"
-              className="text-sm text-zinc-400 hover:text-white transition-colors"
-            >
-              Projects
-            </a>
-          </div>
-        </motion.div>
+    <a
+      href="/projects"
+      className="text-sm text-black-100 hover:text-black transition-colors"
+    >
+      Projects
+    </a>
+  </div>
+</motion.div>
       </div>
     </footer>
   );

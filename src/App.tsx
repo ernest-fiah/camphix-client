@@ -34,6 +34,8 @@ import BlogReadMore from "./pages/BlogReadMore";
 
 import SplashScreen from "./components/SplashScreen";
 import CookieBanner from "./components/Cookies";
+import PolicyPage from "./pages/Policy";
+import TermsPage from "./pages/Terms";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -116,9 +118,20 @@ export default function App() {
 
             <Route path="/digital-marketing" element={<DigitalMarketing />} />
             <Route path="/web-uiux" element={<WebsiteUIUXDesign />} />
-            <Route path="/printing-production" element={<PrintingProduction />} />
-            <Route path="/procurement-logistics" element={<ProcurementLogistics />} />
-            <Route path="/strategic-consultancy" element={<StrategicConsultancy />} />
+            <Route
+              path="/printing-production"
+              element={<PrintingProduction />}
+            />
+            <Route
+              path="/procurement-logistics"
+              element={<ProcurementLogistics />}
+            />
+            <Route
+              path="/strategic-consultancy"
+              element={<StrategicConsultancy />}
+            />
+            <Route path="/policy" element={<PolicyPage />} />
+            <Route path="/terms" element={<TermsPage />} />
 
             {/* BLOG */}
             <Route path="/blog" element={<BlogPage />} />
